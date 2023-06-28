@@ -119,27 +119,25 @@
 (net 24 "LED_7")
 (net 25 "LED")
 (net 26 "LED_8")
-(net 27 "RAW")
-(net 28 "ULED_3")
-(net 29 "ULED_2")
-(net 30 "ULED_1")
-(net 31 "ULED_4")
-(net 32 "ULED_5")
-(net 33 "R0")
-(net 34 "R1")
-(net 35 "R3")
-(net 36 "R4")
-(net 37 "VIN")
-(net 38 "SWDIO")
-(net 39 "SWDCLK")
-(net 40 "RST")
+(net 27 "ULED_3")
+(net 28 "ULED_2")
+(net 29 "ULED_1")
+(net 30 "ULED_4")
+(net 31 "ULED_5")
+(net 32 "R0")
+(net 33 "R1")
+(net 34 "R3")
+(net 35 "R4")
+(net 36 "VIN")
+(net 37 "SWDIO")
+(net 38 "SWDCLK")
+(net 39 "RST")
+(net 40 "P0")
 (net 41 "P1")
 (net 42 "P2")
-(net 43 "P3")
-(net 44 "C3")
-(net 45 "R2")
-(net 46 "RAW3V3")
-(net 47 "RAW5V")
+(net 43 "C3")
+(net 44 "R2")
+(net 45 "RAW")
             
   (net_class Default "This is the default net class."
     (clearance 0.2)
@@ -175,7 +173,6 @@
 (add_net "LED_7")
 (add_net "LED")
 (add_net "LED_8")
-(add_net "RAW")
 (add_net "ULED_3")
 (add_net "ULED_2")
 (add_net "ULED_1")
@@ -189,13 +186,12 @@
 (add_net "SWDIO")
 (add_net "SWDCLK")
 (add_net "RST")
+(add_net "P0")
 (add_net "P1")
 (add_net "P2")
-(add_net "P3")
 (add_net "C3")
 (add_net "R2")
-(add_net "RAW3V3")
-(add_net "RAW5V")
+(add_net "RAW")
   )
 
             
@@ -947,9 +943,9 @@
       (fp_line (start 3.8 -1.6) (end 2.2 -1.6) (layer B.SilkS) (width 0.12))
       (fp_line (start 3.8 0) (end 3.8 -1.6) (layer B.SilkS) (width 0.12))
       (pad 3 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 29 "ULED_2"))
-      (pad 2 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 28 "ULED_3"))
-      (pad 1 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 27 "RAW"))
+      (pad 4 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 28 "ULED_2"))
+      (pad 2 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 27 "ULED_3"))
+      (pad 1 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
     
       (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
       (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -986,9 +982,9 @@
       (fp_line (start 3.8 -1.6) (end 2.2 -1.6) (layer B.SilkS) (width 0.12))
       (fp_line (start 3.8 0) (end 3.8 -1.6) (layer B.SilkS) (width 0.12))
       (pad 3 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 30 "ULED_1"))
-      (pad 2 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 29 "ULED_2"))
-      (pad 1 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 27 "RAW"))
+      (pad 4 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 29 "ULED_1"))
+      (pad 2 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 28 "ULED_2"))
+      (pad 1 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
     
       (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
       (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -1026,8 +1022,8 @@
       (fp_line (start 3.8 0) (end 3.8 -1.6) (layer B.SilkS) (width 0.12))
       (pad 3 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
       (pad 4 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 20 "LED_10"))
-      (pad 2 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 30 "ULED_1"))
-      (pad 1 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 27 "RAW"))
+      (pad 2 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 29 "ULED_1"))
+      (pad 1 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
     
       (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
       (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -1064,9 +1060,9 @@
       (fp_line (start 3.8 -1.6) (end 2.2 -1.6) (layer B.SilkS) (width 0.12))
       (fp_line (start 3.8 0) (end 3.8 -1.6) (layer B.SilkS) (width 0.12))
       (pad 3 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 28 "ULED_3"))
-      (pad 2 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 31 "ULED_4"))
-      (pad 1 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 27 "RAW"))
+      (pad 4 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 27 "ULED_3"))
+      (pad 2 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 30 "ULED_4"))
+      (pad 1 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
     
       (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
       (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -1103,9 +1099,9 @@
       (fp_line (start 3.8 -1.6) (end 2.2 -1.6) (layer B.SilkS) (width 0.12))
       (fp_line (start 3.8 0) (end 3.8 -1.6) (layer B.SilkS) (width 0.12))
       (pad 3 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 31 "ULED_4"))
-      (pad 2 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 32 "ULED_5"))
-      (pad 1 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 27 "RAW"))
+      (pad 4 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 30 "ULED_4"))
+      (pad 2 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 31 "ULED_5"))
+      (pad 1 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
     
       (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
       (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -1115,7 +1111,7 @@
     
 
     (module ComboDiode (layer F.Cu) (tedit 5B24D78E)
-        (at 66.35 129.35 90)
+        (at 62.16 131 0)
         (attr virtual)
 
         
@@ -1139,10 +1135,10 @@
         (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
 
         
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 33 "R0"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 2 "left_down"))
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 33 "R0"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 2 "left_down"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 32 "R0"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 2 "left_down"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 32 "R0"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 2 "left_down"))
 
         
         
@@ -1150,7 +1146,7 @@
     
 
     (module ComboDiode (layer F.Cu) (tedit 5B24D78E)
-        (at 85.35 129.35 90)
+        (at 81.16 131 0)
         (attr virtual)
 
         
@@ -1174,10 +1170,10 @@
         (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
 
         
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 33 "R0"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 4 "middle_down"))
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 33 "R0"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 4 "middle_down"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 32 "R0"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 4 "middle_down"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 32 "R0"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 4 "middle_down"))
 
         
         
@@ -1185,7 +1181,7 @@
     
 
     (module ComboDiode (layer F.Cu) (tedit 5B24D78E)
-        (at 85.35 110.35 90)
+        (at 81.16 112 0)
         (attr virtual)
 
         
@@ -1209,10 +1205,10 @@
         (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
 
         
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 34 "R1"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 5 "middle_up"))
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 34 "R1"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 5 "middle_up"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 33 "R1"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 5 "middle_up"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 33 "R1"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 5 "middle_up"))
 
         
         
@@ -1220,7 +1216,7 @@
     
 
     (module ComboDiode (layer F.Cu) (tedit 5B24D78E)
-        (at 104.35 129.35 90)
+        (at 100.16 131 0)
         (attr virtual)
 
         
@@ -1244,10 +1240,10 @@
         (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
 
         
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 33 "R0"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 7 "right_down"))
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 33 "R0"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 7 "right_down"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 32 "R0"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 7 "right_down"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 32 "R0"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 7 "right_down"))
 
         
         
@@ -1255,7 +1251,7 @@
     
 
     (module ComboDiode (layer F.Cu) (tedit 5B24D78E)
-        (at 66.35 72.35 90)
+        (at 62.16 74 0)
         (attr virtual)
 
         
@@ -1279,10 +1275,10 @@
         (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
 
         
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 35 "R3"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 8 "first_bottom"))
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 35 "R3"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 8 "first_bottom"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 34 "R3"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 8 "first_bottom"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 34 "R3"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 8 "first_bottom"))
 
         
         
@@ -1290,7 +1286,7 @@
     
 
     (module ComboDiode (layer F.Cu) (tedit 5B24D78E)
-        (at 66.35 53.35 90)
+        (at 62.16 55 0)
         (attr virtual)
 
         
@@ -1314,10 +1310,10 @@
         (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
 
         
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 36 "R4"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 9 "first_top"))
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 36 "R4"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 9 "first_top"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 35 "R4"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 9 "first_top"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 35 "R4"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 9 "first_top"))
 
         
         
@@ -1325,7 +1321,7 @@
     
 
     (module ComboDiode (layer F.Cu) (tedit 5B24D78E)
-        (at 85.35 72.35 90)
+        (at 81.16 74 0)
         (attr virtual)
 
         
@@ -1349,10 +1345,10 @@
         (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
 
         
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 35 "R3"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 10 "second_bottom"))
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 35 "R3"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 10 "second_bottom"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 34 "R3"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 10 "second_bottom"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 34 "R3"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 10 "second_bottom"))
 
         
         
@@ -1360,7 +1356,7 @@
     
 
     (module ComboDiode (layer F.Cu) (tedit 5B24D78E)
-        (at 85.35 53.35 90)
+        (at 81.16 55 0)
         (attr virtual)
 
         
@@ -1384,10 +1380,10 @@
         (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
 
         
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 36 "R4"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 11 "second_top"))
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 36 "R4"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 11 "second_top"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 35 "R4"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 11 "second_top"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 35 "R4"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 11 "second_top"))
 
         
         
@@ -1395,7 +1391,7 @@
     
 
     (module ComboDiode (layer F.Cu) (tedit 5B24D78E)
-        (at 104.35 72.35 90)
+        (at 100.16 74 0)
         (attr virtual)
 
         
@@ -1419,10 +1415,10 @@
         (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
 
         
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 35 "R3"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 12 "third_bottom"))
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 35 "R3"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 12 "third_bottom"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 34 "R3"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 12 "third_bottom"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 34 "R3"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 12 "third_bottom"))
 
         
         
@@ -1430,7 +1426,7 @@
     
 
     (module ComboDiode (layer F.Cu) (tedit 5B24D78E)
-        (at 104.35 53.35 90)
+        (at 100.16 55 0)
         (attr virtual)
 
         
@@ -1454,10 +1450,10 @@
         (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
 
         
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 36 "R4"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 13 "third_top"))
-        (pad 1 smd rect (at -1.65 0 90) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 36 "R4"))
-        (pad 2 smd rect (at 1.65 0 90) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 13 "third_top"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 35 "R4"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 13 "third_top"))
+        (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 35 "R4"))
+        (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) (net 13 "third_top"))
 
         
         
@@ -1471,35 +1467,38 @@
         (effects (font (size 1 1) (thickness 0.15)))
       )
       
-      (fp_rect (start -6.3 -6.4) (end -9.8 -3.8) (width 0.1) (layer "B.SilkS"))
-      (pad "RAW" smd oval (at -8.06588 -7.61882 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 47 "RAW5V"))
-      (pad "RAW" thru_hole circle (at -7.649 -7.61882 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 47 "RAW5V"))
+      (fp_line (start -6.3 -6.4) (end -9.8 -6.4) (layer B.SilkS) (width 0.12))
+      (fp_line (start -9.8 -6.4) (end -9.8 -3.8) (layer B.SilkS) (width 0.12))
+      (fp_line (start -6.3 -3.8) (end -9.8 -3.8) (layer B.SilkS) (width 0.12))
+      (fp_line (start -6.3 -6.4) (end -6.3 -3.8) (layer B.SilkS) (width 0.12))
+      (pad "RAW" smd oval (at -8.06588 -7.61882 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 45 "RAW"))
+      (pad "RAW" thru_hole circle (at -7.649 -7.61882 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 45 "RAW"))
       (pad "GND" smd oval (at -8.06588 -5.07882 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 16 "GND"))
       (pad "GND" thru_hole circle (at -7.649 -5.07882 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 16 "GND"))
-      (pad "3V3" smd oval (at -8.06588 -2.53882 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 46 "RAW3V3"))
-      (pad "3V3" thru_hole circle (at -7.649 -2.53882 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 46 "RAW3V3"))
-      (pad "P10" smd oval (at -8.06588 0.00118 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 33 "R0"))
-      (pad "P10" thru_hole circle (at -7.649 0.00118 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 33 "R0"))
-      (pad "P9" smd oval (at -8.06588 2.54118 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 34 "R1"))
-      (pad "P9" thru_hole circle (at -7.649 2.54118 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 34 "R1"))
-      (pad "P8" smd oval (at -8.06588 5.08118 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 45 "R2"))
-      (pad "P8" thru_hole circle (at -7.649 5.08118 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 45 "R2"))
-      (pad "P7" smd oval (at -8.06588 7.62118 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 35 "R3"))
-      (pad "P7" thru_hole circle (at -7.649 7.62118 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 35 "R3"))
-      (pad "P6" thru_hole circle (at 7.682 7.62118 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 44 "C3"))
-      (pad "P6" smd oval (at 8.09868 7.62118 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 44 "C3"))
+      (pad "3V3" smd oval (at -8.06588 -2.53882 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 14 "VCC"))
+      (pad "3V3" thru_hole circle (at -7.649 -2.53882 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 14 "VCC"))
+      (pad "P10" smd oval (at -8.06588 0.00118 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 32 "R0"))
+      (pad "P10" thru_hole circle (at -7.649 0.00118 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 32 "R0"))
+      (pad "P9" smd oval (at -8.06588 2.54118 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 33 "R1"))
+      (pad "P9" thru_hole circle (at -7.649 2.54118 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 33 "R1"))
+      (pad "P8" smd oval (at -8.06588 5.08118 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 44 "R2"))
+      (pad "P8" thru_hole circle (at -7.649 5.08118 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 44 "R2"))
+      (pad "P7" smd oval (at -8.06588 7.62118 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 34 "R3"))
+      (pad "P7" thru_hole circle (at -7.649 7.62118 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 34 "R3"))
+      (pad "P6" thru_hole circle (at 7.682 7.62118 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 43 "C3"))
+      (pad "P6" smd oval (at 8.09868 7.62118 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 43 "C3"))
       (pad "P5" thru_hole circle (at 7.682 5.08118 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 3 "C1"))
       (pad "P5" smd oval (at 8.09868 5.08118 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 3 "C1"))
       (pad "P4" thru_hole circle (at 7.682 2.54118 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 1 "C0"))
       (pad "P4" smd oval (at 8.09868 2.54118 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 1 "C0"))
-      (pad "P3" thru_hole circle (at 7.682 0.00118 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 43 "P3"))
-      (pad "P3" smd oval (at 8.09868 0.00118 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 43 "P3"))
+      (pad "P3" thru_hole circle (at 7.682 0.00118 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 25 "LED"))
+      (pad "P3" smd oval (at 8.09868 0.00118 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 25 "LED"))
       (pad "P2" thru_hole circle (at 7.682 -2.53882 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 42 "P2"))
       (pad "P2" smd oval (at 8.09868 -2.53882 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 42 "P2"))
       (pad "P1" thru_hole circle (at 7.682 -5.07882 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 41 "P1"))
       (pad "P1" smd oval (at 8.09868 -5.07882 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 41 "P1"))
-      (pad "P0" thru_hole circle (at 7.682 -7.61882 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 25 "LED"))
-      (pad "P0" thru_hole oval (at 8.09868 -7.61882 0) (size 2.74828 1.99898) (drill 0.762) (layers "B.Cu" "B.Paste" "B.Mask") (net 25 "LED"))
+      (pad "P0" thru_hole circle (at 7.682 -7.61882 0) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") (net 40 "P0"))
+      (pad "P0" smd oval (at 8.09868 -7.61882 0) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") (net 40 "P0"))
     
     )
     

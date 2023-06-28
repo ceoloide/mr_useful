@@ -20,9 +20,9 @@ units:
   led_pos_y: 4.75 # Led Y position relative to the switch center
   led_rotation: 0 # Led rotation
   vertical_underglow_shift: 0.5 kp # How much to shift underglow leds tied to keys
-  diode_pos_x: 6.35 # Led X position relative to the switch center
-  diode_pos_y: -4.35 # Led Y position relative to the switch center
-  diode_rotation: 90 # Diode rotation
+  diode_pos_x: 2.16 # Led X position relative to the switch center
+  diode_pos_y: -6.0 # Led Y position relative to the switch center
+  diode_rotation: 0 # Diode rotation
   switch_rotation: 180 # 0 = Hotswap south, led north
 
   # Physical measures
@@ -302,7 +302,7 @@ pcbs:
           - arrows_left_down
           - arrows_right_down
         params:
-          P1: RAW
+          P1: VCC
           P2: "{{key.underglow_next}}" #DOUT
           P3: GND
           P4: "{{key.underglow_prev}}" #DIN
@@ -336,3 +336,4 @@ pcbs:
           P8: R2
           P9: R1
           P10: R0
+          RAW3V3: VCC
