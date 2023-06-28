@@ -201,6 +201,9 @@ module.exports = {
         final += extra_pads_flipped;
       }
     }
+
+    final += standard_closing;
+
     return final;
   }
 }
