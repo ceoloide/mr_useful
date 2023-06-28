@@ -193,6 +193,19 @@ outlines:
       fillet: 1
       adjust:
         shift: [0, kp]
+  
+  _xiao_footprint:
+    - what: rectangle
+      where: navigation_second_top
+      size: [17.8, 21] # XIAO SAMD21 PCB size
+      adjust:
+        shift: [0, 0]
+    - what: rectangle
+      where: navigation_second_top
+      size: [9, 7.35] # USB-C port
+      adjust:
+        shift: [0, 8.2465]
+      expand: 1
 
   pcb:
     - what: rectangle
@@ -219,7 +232,7 @@ outlines:
       name: _screws
       operation: subtract
 
-  spacer_plate:
+  spacer_plate_top:
     - what: outline
       name: _keys
     - what: outline
@@ -227,6 +240,25 @@ outlines:
       operation: subtract
     - what: outline
       name: _spacers
+      operation: subtract
+
+  spacer_plate_bottom:
+    - what: outline
+      name: _keys
+    - what: outline
+      name: _pcb_tolerance
+      operation: subtract
+    - what: outline
+      name: _spacers
+      operation: subtract
+    - what: outline
+      name: _xiao_footprint
+      operation: subtract
+    - what: rectangle
+      where: navigation_second_top
+      size: [13, 20] # XIAO SAMD21 PCB size
+      adjust:
+        shift: [0, 8]
       operation: subtract
     
   preview:
@@ -236,7 +268,6 @@ outlines:
       where: [key]
       size: [keycw, keych]
       operation: stack
-      fillet: fillet_radius
     - what: outline
       name: _switch_cutouts
       operation: stack
@@ -247,8 +278,27 @@ outlines:
       name: pcb
       operation: stack
     - what: outline
-      name: spacer_plate
+      name: spacer_plate_top
       operation: stack
+    - what: outline
+      name: spacer_plate_bottom
+      operation: stack
+    - what: outline
+      name: _xiao_footprint
+      operation: stack
+    - what: rectangle
+      where: navigation_second_top
+      size: [9, 7.35] # XIAO SAMD21 PCB size
+      adjust:
+        shift: [0, 8.2465]
+      operation: stack
+    - what: rectangle
+      where: navigation_second_top
+      size: [17.8, 21] # XIAO SAMD21 PCB size
+      adjust:
+        shift: [0, 0]
+      operation: stack
+
 pcbs:
   back_plate:
     outlines:
@@ -258,10 +308,14 @@ pcbs:
     outlines:
       main:
         outline: front_plate
-  spacer_plate:
+  spacer_plate_bottom:
     outlines:
       main:
-        outline: spacer_plate
+        outline: spacer_plate_bottom
+  spacer_plate_top:
+    outlines:
+      main:
+        outline: spacer_plate_top
   mr_useful:
     outlines:
       main:

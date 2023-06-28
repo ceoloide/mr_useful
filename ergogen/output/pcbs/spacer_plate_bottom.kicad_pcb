@@ -4,7 +4,7 @@
 
   (page A3)
   (title_block
-    (title spacer_plate)
+    (title spacer_plate_bottom)
     (rev 0.1)
     (company ceoloide)
   )
@@ -107,7 +107,8 @@
             
             (gr_line (start 44.875 141.625) (end 113.125 141.625) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 114.625 140.125) (end 114.625 33.875) (angle 90) (layer Edge.Cuts) (width 0.15))
-(gr_line (start 113.125 32.375) (end 44.875 32.375) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 113.125 32.375) (end 85.5 32.375) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 72.5 32.375) (end 44.875 32.375) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 43.375 33.875) (end 43.375 140.125) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_arc (start 113.125 140.125) (end 113.125 141.625) (angle -90) (layer Edge.Cuts) (width 0.15))
 (gr_arc (start 113.125 33.875) (end 114.625 33.875) (angle -90) (layer Edge.Cuts) (width 0.15))
@@ -115,7 +116,8 @@
 (gr_arc (start 44.875 140.125) (end 43.375 140.125) (angle -90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 51.25 134.75) (end 106.75 134.75) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 107.75 133.75) (end 107.75 40.25) (angle 90) (layer Edge.Cuts) (width 0.15))
-(gr_line (start 106.75 39.25) (end 51.25 39.25) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 106.75 39.25) (end 88.89999999999999 39.25) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 69.1 39.25) (end 51.25 39.25) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 50.25 40.25) (end 50.25 133.75) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_arc (start 106.75 133.75) (end 106.75 134.75) (angle -90) (layer Edge.Cuts) (width 0.15))
 (gr_arc (start 106.75 40.25) (end 107.75 40.25) (angle -90) (layer Edge.Cuts) (width 0.15))
@@ -127,6 +129,14 @@
 (gr_circle (center 111.3 87) (end 113.35 87) (layer Edge.Cuts) (width 0.15))
 (gr_circle (center 46.7 138.3) (end 48.75 138.3) (layer Edge.Cuts) (width 0.15))
 (gr_circle (center 111.3 138.3) (end 113.35 138.3) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 88.89999999999999 39.25) (end 88.89999999999999 38.5) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 87.89999999999999 38.5) (end 88.89999999999999 38.5) (angle -90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 87.89999999999999 37.5) (end 85.5 37.5) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 72.5 37.5) (end 70.1 37.5) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 70.1 38.5) (end 70.1 37.5) (angle -90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 69.1 38.5) (end 69.1 39.25) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 85.5 37.5) (end 85.5 32.375) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 72.5 32.375) (end 72.5 37.5) (angle 90) (layer Edge.Cuts) (width 0.15))
             
 )
 
