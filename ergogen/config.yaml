@@ -20,7 +20,7 @@ units:
   led_pos_y: 4.75 # Led Y position relative to the switch center
   led_rotation: 0 # Led rotation
   vertical_underglow_shift: 0.5 kp # How much to shift underglow leds tied to keys
-  diode_pos_x: -5.35 # Led X position relative to the switch center
+  diode_pos_x: 6.35 # Led X position relative to the switch center
   diode_pos_y: -4.35 # Led Y position relative to the switch center
   diode_rotation: 90 # Diode rotation
   switch_rotation: 180 # 0 = Hotswap south, led north
@@ -42,10 +42,14 @@ points:
         left:
           key:
             column_net: C0
-            led_prev: LED_3
-            led_next: LED_4
-            underglow_prev: ULED_2
-            underglow_next: ULED_3
+          rows:
+            down:
+              row_net: R0
+              key:
+                led_prev: LED_3
+                led_next: LED_4
+                underglow_prev: ULED_2
+                underglow_next: ULED_3
         middle:
           key:
             column_net: C1
@@ -65,10 +69,14 @@ points:
         right:
           key:
             column_net: C2
-            led_prev: LED_9
-            led_next: LED_10
-            underglow_prev: LED_10
-            underglow_next: ULED_1
+          rows:
+            down:
+              row_net: R0
+              key:
+                led_prev: LED_9
+                led_next: LED_10
+                underglow_prev: LED_10
+                underglow_next: ULED_1
     navigation:
       key:
         tags: 
@@ -146,12 +154,12 @@ points:
     bottom_left_screw:
       <<: *screw
       anchor:
-        ref: arrows_left
+        ref: arrows_left_down
         shift: [-0.7 ks,-0.7 kp]
     bottom_right_screw:
       <<: *screw
       anchor:
-        ref: arrows_right
+        ref: arrows_right_down
         shift: [0.7 ks,-0.7 kp]
 
 outlines:
@@ -291,10 +299,10 @@ pcbs:
           - navigation_first_bottom
           - navigation_third_bottom
           - arrows_middle_up
-          - arrows_left
-          - arrows_right
+          - arrows_left_down
+          - arrows_right_down
         params:
-          P1: VCC
+          P1: RAW
           P2: "{{key.underglow_next}}" #DOUT
           P3: GND
           P4: "{{key.underglow_prev}}" #DIN
