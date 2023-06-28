@@ -21,8 +21,8 @@ module.exports = {
       P8:     {type: 'net', value: 'P8'},
       P9:     {type: 'net', value: 'P9'},
       P10:    {type: 'net', value: 'P10'},
-      RAW3V3: {type: 'net', value: 'RAW3V3'},
-      RAW5V:  {type: 'net', value: 'RAW5V'},
+      RAW3V3: {type: 'net', value: 'VCC'},
+      RAW5V:  {type: 'net', value: 'RAW'},
   },
   body:   p => {
     const standard_opening = `
@@ -34,6 +34,10 @@ module.exports = {
       )
       `
     const front_pads = `
+      (fp_line (start 6.3 -6.4) (end 9.8 -6.4) (layer F.SilkS) (width 0.12))
+      (fp_line (start 9.8 -6.4) (end 9.8 -3.8) (layer F.SilkS) (width 0.12))
+      (fp_line (start 6.3 -3.8) (end 9.8 -3.8) (layer F.SilkS) (width 0.12))
+      (fp_line (start 6.3 -6.4) (end 6.3 -3.8) (layer F.SilkS) (width 0.12))
       (fp_rect (start 6.3 -6.4) (end 9.8 -3.8) (width 0.1) (layer "F.SilkS"))
       (pad "P0" smd oval (at -8.06588 -7.61882 ${p.rot}) (size 2.74828 1.99898) (layers "F.Cu" "F.Paste" "F.Mask") ${p.P0.str})
       (pad "P0" thru_hole circle (at -7.649 -7.61882 ${p.rot}) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") ${p.P0.str})
@@ -62,10 +66,13 @@ module.exports = {
       (pad "GND" thru_hole circle (at 7.682 -5.07882 ${p.rot}) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") ${p.GND.str})
       (pad "GND" smd oval (at 8.09868 -5.07882 ${p.rot}) (size 2.74828 1.99898) (layers "F.Cu" "F.Paste" "F.Mask") ${p.GND.str})
       (pad "RAW" thru_hole circle (at 7.682 -7.61882 ${p.rot}) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") ${p.RAW5V.str})
-      (pad "RAW" thru_hole oval (at 8.09868 -7.61882 ${p.rot}) (size 2.74828 1.99898) (drill 0.762) (layers "F.Cu" "F.Paste" "F.Mask") ${p.RAW5V.str})
+      (pad "RAW" smd oval (at 8.09868 -7.61882 ${p.rot}) (size 2.74828 1.99898) (layers "F.Cu" "F.Paste" "F.Mask") ${p.RAW5V.str})
     `
     const front_pads_flipped = `
-      (fp_rect (start -6.3 -6.4) (end -9.8 -3.8) (width 0.1) (layer "F.SilkS"))
+      (fp_line (start -6.3 -6.4) (end -9.8 -6.4) (layer F.SilkS) (width 0.12))
+      (fp_line (start -9.8 -6.4) (end -9.8 -3.8) (layer F.SilkS) (width 0.12))
+      (fp_line (start -6.3 -3.8) (end -9.8 -3.8) (layer F.SilkS) (width 0.12))
+      (fp_line (start -6.3 -6.4) (end -6.3 -3.8) (layer F.SilkS) (width 0.12))
       (pad "RAW" smd oval (at -8.06588 -7.61882 ${p.rot}) (size 2.74828 1.99898) (layers "F.Cu" "F.Paste" "F.Mask") ${p.RAW5V.str})
       (pad "RAW" thru_hole circle (at -7.649 -7.61882 ${p.rot}) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") ${p.RAW5V.str})
       (pad "GND" smd oval (at -8.06588 -5.07882 ${p.rot}) (size 2.74828 1.99898) (layers "F.Cu" "F.Paste" "F.Mask") ${p.GND.str})
@@ -93,10 +100,13 @@ module.exports = {
       (pad "P1" thru_hole circle (at 7.682 -5.07882 ${p.rot}) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") ${p.P1.str})
       (pad "P1" smd oval (at 8.09868 -5.07882 ${p.rot}) (size 2.74828 1.99898) (layers "F.Cu" "F.Paste" "F.Mask") ${p.P1.str})
       (pad "P0" thru_hole circle (at 7.682 -7.61882 ${p.rot}) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") ${p.P0.str})
-      (pad "P0" thru_hole oval (at 8.09868 -7.61882 ${p.rot}) (size 2.74828 1.99898) (drill 0.762) (layers "F.Cu" "F.Paste" "F.Mask") ${p.P0.str})
+      (pad "P0" smd oval (at 8.09868 -7.61882 ${p.rot}) (size 2.74828 1.99898) (layers "F.Cu" "F.Paste" "F.Mask") ${p.P0.str})
     `
     const back_pads = `
-      (fp_rect (start -6.3 -6.4) (end -9.8 -3.8) (width 0.1) (layer "B.SilkS"))
+      (fp_line (start -6.3 -6.4) (end -9.8 -6.4) (layer B.SilkS) (width 0.12))
+      (fp_line (start -9.8 -6.4) (end -9.8 -3.8) (layer B.SilkS) (width 0.12))
+      (fp_line (start -6.3 -3.8) (end -9.8 -3.8) (layer B.SilkS) (width 0.12))
+      (fp_line (start -6.3 -6.4) (end -6.3 -3.8) (layer B.SilkS) (width 0.12))
       (pad "RAW" smd oval (at -8.06588 -7.61882 ${p.rot}) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") ${p.RAW5V.str})
       (pad "RAW" thru_hole circle (at -7.649 -7.61882 ${p.rot}) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") ${p.RAW5V.str})
       (pad "GND" smd oval (at -8.06588 -5.07882 ${p.rot}) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") ${p.GND.str})
@@ -124,10 +134,13 @@ module.exports = {
       (pad "P1" thru_hole circle (at 7.682 -5.07882 ${p.rot}) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") ${p.P1.str})
       (pad "P1" smd oval (at 8.09868 -5.07882 ${p.rot}) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") ${p.P1.str})
       (pad "P0" thru_hole circle (at 7.682 -7.61882 ${p.rot}) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") ${p.P0.str})
-      (pad "P0" thru_hole oval (at 8.09868 -7.61882 ${p.rot}) (size 2.74828 1.99898) (drill 0.762) (layers "B.Cu" "B.Paste" "B.Mask") ${p.P0.str})
+      (pad "P0" smd oval (at 8.09868 -7.61882 ${p.rot}) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") ${p.P0.str})
     `
     const back_pads_flipped = `
-      (fp_rect (start 6.3 -6.4) (end 9.8 -3.8) (width 0.1) (layer "B.SilkS"))
+      (fp_line (start 6.3 -6.4) (end 9.8 -6.4) (layer B.SilkS) (width 0.12))
+      (fp_line (start 9.8 -6.4) (end 9.8 -3.8) (layer B.SilkS) (width 0.12))
+      (fp_line (start 6.3 -3.8) (end 9.8 -3.8) (layer B.SilkS) (width 0.12))
+      (fp_line (start 6.3 -6.4) (end 6.3 -3.8) (layer B.SilkS) (width 0.12))
       (pad "P0" smd oval (at -8.06588 -7.61882 ${p.rot}) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") ${p.P0.str})
       (pad "P0" thru_hole circle (at -7.649 -7.61882 ${p.rot}) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") ${p.P0.str})
       (pad "P1" smd oval (at -8.06588 -5.07882 ${p.rot}) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") ${p.P1.str})
@@ -155,7 +168,7 @@ module.exports = {
       (pad "GND" thru_hole circle (at 7.682 -5.07882 ${p.rot}) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") ${p.GND.str})
       (pad "GND" smd oval (at 8.09868 -5.07882 ${p.rot}) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") ${p.GND.str})
       (pad "RAW" thru_hole circle (at 7.682 -7.61882 ${p.rot}) (size 1.524 1.524) (drill 1) (layers "*.Cu" "*.Mask") ${p.RAW5V.str})
-      (pad "RAW" thru_hole oval (at 8.09868 -7.61882 ${p.rot}) (size 2.74828 1.99898) (drill 0.762) (layers "B.Cu" "B.Paste" "B.Mask") ${p.RAW5V.str})
+      (pad "RAW" smd oval (at 8.09868 -7.61882 ${p.rot}) (size 2.74828 1.99898) (layers "B.Cu" "B.Paste" "B.Mask") ${p.RAW5V.str})
     `
     const extra_pads = `
       (pad "VIN" thru_hole oval (at -1.199 8.699 ${90 + p.rot}) (size 2.032 1.016) (drill 0.3) (layers "*.Cu" "*.Paste" "*.Mask") ${p.VIN.str})
