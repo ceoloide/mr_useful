@@ -315,10 +315,11 @@ pcbs:
           rotate: diode_rotation
 
       mcu:
-        what: xiao
+        what: seeedstudio_xiao_samd21
         where: navigation_second_top
         params:
           side: B
+          flip: false  # MCU faces away from PCB
           P3: LED
           P4: C0
           P5: C1
@@ -327,6 +328,3 @@ pcbs:
           P8: R2
           P9: R1
           P10: R0
-        adjust:
-          # Xiao dimensions from origin: 17.8, 21
-          shift: [17.8 / -2, (21 / -2) - 1]
