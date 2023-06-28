@@ -19,7 +19,7 @@ fab=jlcpcb
 flags=--no-assembly
 
 # Define the pcbdraw style
-pcbdraw_style=set-black-hasl
+pcbdraw_style=set-blue-enig
 
 for plate in ${plates}
 do
