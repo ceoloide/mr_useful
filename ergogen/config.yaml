@@ -318,6 +318,7 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
           include_tht: false
+          side: B
         adjust:
           shift: [diode_pos_x, diode_pos_y]
           rotate: diode_rotation
