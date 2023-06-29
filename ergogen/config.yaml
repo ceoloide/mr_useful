@@ -130,7 +130,7 @@ points:
     top_left_screw: &screw
       anchor:
         ref: navigation_first_top
-        shift: [-0.7 ks,0.7 kp]
+        shift: [-0.5 ks -4,0.5 kp]
       key:
         tags:
           - screw
@@ -178,19 +178,10 @@ outlines:
       where: [screw]
       radius: spacer_radius
 
-  _keys:
+  _base:
     - what: rectangle
       where: arrows_middle_up
-      size: [3.75 ks, 5.75 kp]
-      fillet: 1.5
-      adjust:
-        shift: [0, kp]
-
-  _pcb_tolerance:
-    - what: rectangle
-      where: arrows_middle_up
-      size: [3 ks + 0.5, 5 kp + 0.5]
-      fillet: 1
+      size: [3 ks, 5 kp]
       adjust:
         shift: [0, kp]
   
@@ -205,19 +196,28 @@ outlines:
       size: [9, 7.35] # USB-C port
       adjust:
         shift: [0, 8.2465]
+
+  _xiao_footprint_tolerance:
+    - what: outline
+      name: _xiao_footprint
       expand: 1
 
   pcb:
-    - what: rectangle
-      where: arrows_middle_up
-      size: [3 ks, 5 kp]
+    - what: outline
+      name: _base
       fillet: 1
-      adjust:
-        shift: [0, kp]
+
+  _pcb_tolerance:
+    - what: outline
+      name: pcb
+      expand: 1
 
   front_plate:
     - what: outline
-      name: _keys
+      name: _base
+      expand: 8
+      joints: 1
+      fillet: 2
     - what: outline
       name: _switch_cutouts
       operation: subtract
@@ -227,14 +227,14 @@ outlines:
 
   back_plate:
     - what: outline
-      name: _keys
+      name: front_plate
     - what: outline
-      name: _screws
-      operation: subtract
+      name: _base
+      operation: add
 
   spacer_plate_top:
     - what: outline
-      name: _keys
+      name: front_plate
     - what: outline
       name: _pcb_tolerance
       operation: subtract
@@ -244,7 +244,7 @@ outlines:
 
   spacer_plate_bottom:
     - what: outline
-      name: _keys
+      name: front_plate
     - what: outline
       name: _pcb_tolerance
       operation: subtract
@@ -252,7 +252,7 @@ outlines:
       name: _spacers
       operation: subtract
     - what: outline
-      name: _xiao_footprint
+      name: _xiao_footprint_tolerance
       operation: subtract
     - what: rectangle
       where: navigation_second_top
@@ -260,10 +260,40 @@ outlines:
       adjust:
         shift: [0, 8]
       operation: subtract
-    
+
+  debug_points:
+    - what: rectangle
+      where: true
+      size: [6,0.01]
+    - what: rectangle
+      where: true
+      size: [0.01,4]
+    - what: circle
+      where: true
+      radius: 0.4
+      adjust:
+        shift: [3,0]
+    - what: circle
+      where: true
+      radius: 0.4
+      adjust:
+        shift: [0,2]
+    - what: rectangle
+      where: [key]
+      size: [kx, ky]
+      operation: stack
+    - what: rectangle
+      where: [key]
+      size: [kcow, kcoh]
+      operation: stack
+    - what: circle
+      where: [screw]
+      radius: 2
+      operation: stack
+
   preview:
     - what: outline
-      name: _keys
+      name: debug_points
     - what: rectangle
       where: [key]
       size: [keycw, keych]
@@ -288,15 +318,9 @@ outlines:
       operation: stack
     - what: rectangle
       where: navigation_second_top
-      size: [9, 7.35] # XIAO SAMD21 PCB size
+      size: [9, 7.35] # XIAO USB-C
       adjust:
         shift: [0, 8.2465]
-      operation: stack
-    - what: rectangle
-      where: navigation_second_top
-      size: [17.8, 21] # XIAO SAMD21 PCB size
-      adjust:
-        shift: [0, 0]
       operation: stack
 
 pcbs:
