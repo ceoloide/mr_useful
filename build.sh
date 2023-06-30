@@ -12,7 +12,7 @@ npm run debug
 
 # Define the boards to autoroute and export, and the plates
 boards="mr_useful"
-plates="back_plate front_plate spacer_plate"
+plates="back_plate front_plate spacer_plate_bottom spacer_plate_top"
 
 # Define the fabrication profile and additional flags
 fab=jlcpcb
