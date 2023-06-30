@@ -28,7 +28,9 @@ units:
   # Physical measures
   screw_radius: 1.1 # M2 screws
   spacer_radius: 2.05 # M2 standoffs
-  fillet_radius: 0.5
+  fillet_radius: 1
+  pcb_tolerance: 0.5 # How much to expand the PCB on a single side
+  frame_dimension: 4 # The size of the stacked acrylic frame
 
 points:
   zones:
@@ -130,7 +132,7 @@ points:
     top_left_screw: &screw
       anchor:
         ref: navigation_first_top
-        shift: [-0.5 ks -4,0.5 kp]
+        shift: [-0.5 ks - (pcb_tolerance + frame_dimension),0.5 kp + (pcb_tolerance + frame_dimension)]
       key:
         tags:
           - screw
@@ -140,29 +142,59 @@ points:
       <<: *screw
       anchor:
         ref: navigation_third_top
-        shift: [0.7 ks,0.7 kp]
+        shift: [0.5 ks + (pcb_tolerance + frame_dimension),0.5 kp + (pcb_tolerance + frame_dimension)]
     mid_left_screw:
       <<: *screw
       anchor:
         ref: arrows_middle_up
-        shift: [-1.7 ks,1 kp]
+        shift: [-1.5 ks - (pcb_tolerance + frame_dimension),1 kp]
     mid_right_screw:
       <<: *screw
       anchor:
         ref: arrows_middle_up
-        shift: [1.7 ks,1 kp]
+        shift: [1.5 ks + (pcb_tolerance + frame_dimension),1 kp]
     bottom_left_screw:
       <<: *screw
       anchor:
         ref: arrows_left_down
-        shift: [-0.7 ks,-0.7 kp]
+        shift: [-0.5 ks - (pcb_tolerance + frame_dimension),-0.5 kp - (pcb_tolerance + frame_dimension)]
     bottom_right_screw:
       <<: *screw
       anchor:
         ref: arrows_right_down
-        shift: [0.7 ks,-0.7 kp]
+        shift: [0.5 ks + (pcb_tolerance + frame_dimension),-0.5 kp - (pcb_tolerance + frame_dimension)]
 
 outlines:
+  debug_points:
+    - what: rectangle
+      where: true
+      size: [6,0.01]
+    - what: rectangle
+      where: true
+      size: [0.01,4]
+    - what: circle
+      where: true
+      radius: 0.4
+      adjust:
+        shift: [3,0]
+    - what: circle
+      where: true
+      radius: 0.4
+      adjust:
+        shift: [0,2]
+    - what: rectangle
+      where: [key]
+      size: [kx, ky]
+      operation: stack
+    - what: rectangle
+      where: [key]
+      size: [kcow, kcoh]
+      operation: stack
+    - what: circle
+      where: [screw]
+      radius: 2
+      operation: stack
+
   _switch_cutouts:
     - what: rectangle
       where: [key]
@@ -200,24 +232,24 @@ outlines:
   _xiao_footprint_tolerance:
     - what: outline
       name: _xiao_footprint
-      expand: 1
+      expand: pcb_tolerance * 2
 
   pcb:
     - what: outline
       name: _base
-      fillet: 1
+      fillet: fillet_radius
 
   _pcb_tolerance:
     - what: outline
       name: pcb
-      expand: 1
+      expand: pcb_tolerance * 2
 
   front_plate:
     - what: outline
       name: _base
-      expand: 8
+      expand: frame_dimension * 2
       joints: 1
-      fillet: 2
+      fillet: fillet_radius * 2
     - what: outline
       name: _switch_cutouts
       operation: subtract
@@ -260,36 +292,6 @@ outlines:
       adjust:
         shift: [0, 8]
       operation: subtract
-
-  debug_points:
-    - what: rectangle
-      where: true
-      size: [6,0.01]
-    - what: rectangle
-      where: true
-      size: [0.01,4]
-    - what: circle
-      where: true
-      radius: 0.4
-      adjust:
-        shift: [3,0]
-    - what: circle
-      where: true
-      radius: 0.4
-      adjust:
-        shift: [0,2]
-    - what: rectangle
-      where: [key]
-      size: [kx, ky]
-      operation: stack
-    - what: rectangle
-      where: [key]
-      size: [kcow, kcoh]
-      operation: stack
-    - what: circle
-      where: [screw]
-      radius: 2
-      operation: stack
 
   preview:
     - what: outline
