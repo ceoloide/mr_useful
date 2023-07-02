@@ -1,4 +1,4 @@
-// Seeed Studio XIAO SAMD21 (aka Seeeduino Xiao) with vias for underside pads
+// Seeed Studio XIAO SAMD21 / RP2040 (aka Seeeduino Xiao) with vias for underside pads
 module.exports = {
   params: {
       designator: 'MCU',
@@ -32,6 +32,39 @@ module.exports = {
       (fp_text reference "${p.ref}" (at 0 6.4) (layer ${p.side}.SilkS) ${p.ref_hide}
         (effects (font (size 1 1) (thickness 0.15)))
       )
+
+      (fp_line (start -8.89778 -10.5) (end -8.89778 10.5) (width 0.127) (layer "Dwgs.User"))
+      (fp_line (start -8.89778 10.5) (end 8.88 10.5) (width 0.127) (layer "Dwgs.User"))
+      (fp_line (start -5.21478 -10.582) (end -3.43678 -10.582) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start -5.21478 -7.915) (end -5.21478 -10.582) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start -5.21478 -7.915) (end -3.43678 -7.915) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start -5.21478 -6.518) (end -3.43678 -6.518) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start -5.21478 -3.84846) (end -5.21478 -6.518) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start -5.21478 -3.84846) (end -3.43678 -3.84846) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start -4.50358 -4.56982) (end -4.50358 -11.92312) (width 0.127) (layer "Dwgs.User"))
+      (fp_line (start -4.4985 -11.92312) (end 4.49564 -11.92312) (width 0.127) (layer "Dwgs.User"))
+      (fp_line (start -3.43678 -7.915) (end -3.43678 -10.582) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start -3.43678 -3.84846) (end -3.43678 -6.518) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start -2.54778 -9.82) (end 2.53222 -9.82) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start -2.54778 -7.28) (end -2.54778 -9.82) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start -2.54778 -7.28) (end 2.53222 -7.28) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start -2.54778 7.325) (end 3.16722 7.325) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start -2.54778 9.865) (end -2.54778 7.325) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start -2.54778 9.865) (end 3.16722 9.865) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start 2.53222 -7.28) (end 2.53222 -9.82) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start 3.16722 9.865) (end 3.16722 7.325) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start 3.42122 -10.582) (end 5.19922 -10.582) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start 3.42122 -7.915) (end 3.42122 -10.582) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start 3.42122 -7.915) (end 5.19922 -7.915) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start 3.42122 -6.518) (end 5.19922 -6.518) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start 3.42122 -3.84846) (end 3.42122 -6.518) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start 3.42122 -3.84846) (end 5.19922 -3.84846) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start 4.49564 -11.92312) (end 4.49564 -4.56982) (width 0.127) (layer "Dwgs.User"))
+      (fp_line (start 4.49564 -4.56982) (end -4.50358 -4.56982) (width 0.127) (layer "Dwgs.User"))
+      (fp_line (start 5.19922 -7.915) (end 5.19922 -10.582) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start 5.19922 -3.84846) (end 5.19922 -6.518) (width 0.06604) (layer "Dwgs.User"))
+      (fp_line (start 8.9 -10.49818) (end -8.9 -10.49818) (width 0.127) (layer "Dwgs.User"))
+      (fp_line (start 8.9 10.5) (end 8.9 -10.5) (width 0.1) (layer "Dwgs.User"))
       `
     const front_pads = `
       (fp_line (start 6.3 -6.4) (end 9.8 -6.4) (layer F.SilkS) (width 0.12))
