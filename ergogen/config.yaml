@@ -2,9 +2,9 @@ meta:
   engine: 4.0.4
   name: mr_useful
   version: 0.1
-  ref: &kb_ref "Mr. Useful v0.1"
+  ref: &kb_ref "v0.1 pre-release"
   author: ceoloide
-  url: https://github.com/ceoloide/mr_useful
+  url: &kb_url github.com/ceoloide/mr_useful
 
 units:
   # Key and keycap measures
@@ -420,3 +420,12 @@ pcbs:
           P9: R1
           P10: R0
           RAW3V3: VCC
+      
+      logo:
+        what: logo_mr_useful
+        where: arrows_middle_up
+        params:
+          text_line_1: *kb_url
+          text_line_2: *kb_ref
+        adjust:
+          shift: [0,1 ks]
