@@ -398,6 +398,8 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
           include_tht: false
+          include_smd: true
+          reversible: false
           side: B
         adjust:
           shift: [diode_pos_x, diode_pos_y]
