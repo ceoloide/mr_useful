@@ -404,7 +404,7 @@ pcbs:
           rotate: diode_rotation
 
       mcu:
-        what: seeedstudio_xiao_samd21
+        what: seeedstudio_xiao
         where: navigation_second_top
         params:
           side: B
