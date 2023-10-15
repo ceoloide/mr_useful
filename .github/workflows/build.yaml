@@ -1,0 +1,59 @@
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'ergogen/footprints/*.js'
+      - 'ergogen/config.yaml'
+      - 'kibot/*.yaml'
+      - '.github/workflows/*.yaml'
+      - '.github/actions/*/action.yaml'
+      - 'package.json'
+
+name: Build
+jobs:
+  board:
+    runs-on: ubuntu-latest
+    name: Generate
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+      - name: Docker Cache
+        uses: ScribeMD/docker-cache@0.3.3
+        with:
+          key: docker-${{ runner.os }}
+      - name: Use Node.js 17
+        uses: actions/setup-node@v3
+        with:
+          node-version: 17.x
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm install
+      - name: Generate unrouted PCBs with Ergogen (definition in package.json)
+        run: npm run build
+      - name: Run KiBot to generate images, gerbers for the plate files
+        uses: ./.github/actions/kibot
+        with:
+          boards: back_plate front_plate spacer_plate_bottom spacer_plate_top mr_useful
+      - name: Export DSN file for Freerouting
+        uses: ./.github/actions/export-dsn
+        with:
+          boards: mr_useful
+      - name: Autoroute PCB
+        uses: ./.github/actions/autoroute
+        with:
+          boards: mr_useful
+      # - name: Import SES
+      #   uses: ./.github/actions/import-ses
+      #   with:
+      #     boards: mr_useful
+      # - name: DRC check
+      #   uses: ./.github/actions/run-drc
+      #   with:
+      #     boards: mr_useful
+      - name: Persist output
+        uses: actions/upload-artifact@v3
+        with:
+          name: mr_useful_unrouted
+          path: ergogen/output

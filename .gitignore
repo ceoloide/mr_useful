@@ -1,6 +1,10 @@
 # For PCBs designed using KiCad: https://www.kicad.org/
 # Format documentation: https://kicad.org/help/file-formats/
 
+# Freerouting
+freerouting/freerouting-*.jar
+logs/freerouting.log
+
 # Temporary files
 *.000
 *.bak
@@ -43,5 +47,5 @@ ergogen/output/source
 node_modules
 
 # gerbers
-ergogen/output/gerbers/*
-!ergogen/output/gerbers/*.zip
+ergogen/output/gerbers/*/*
+!ergogen/output/gerbers/*/*.zip

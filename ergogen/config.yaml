@@ -334,6 +334,15 @@ pcbs:
     outlines:
       main:
         outline: front_plate
+    footprints:
+      logo:
+        what: logo_mr_useful
+        where: arrows_middle_up
+        params:
+          text_line_1: *kb_url
+          text_line_2: *kb_ref
+        adjust:
+          shift: [0,1 ks]
   spacer_plate_bottom:
     outlines:
       main:
@@ -398,7 +407,6 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
           include_tht: false
-          include_smd: true
           reversible: false
           side: B
         adjust:
