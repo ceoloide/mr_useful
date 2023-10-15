@@ -525,11 +525,11 @@
           )
         
 
-      (module "YS-SK6812MINI-E" (layer B.Cu) (tedit 5F70BC98)
+      (module "ceoloide:YS-SK6812MINI-E (per-key)" (layer B.Cu) (tedit 5F70BC98)
         (at 60 120.25 0)
 
-        (fp_text reference "LED1" (at 0.2 11.2) (layer B.SilkS) hide
-          (effects (font (size 1 1) (thickness 0.15)))
+        (fp_text reference "LED1" (at -4.75 0 90) (layer B.SilkS) hide
+          (effects (font (size 1 1) (thickness 0.153)))
         )
 
         (fp_line (start -1.6 -1.4) (end 1.6 -1.4) (layer Dwgs.User) (width 0.12))
@@ -549,26 +549,70 @@
         (fp_line (start 2.94 -1.05) (end 1.6 -1.05) (layer Dwgs.User) (width 0.12))
         (fp_line (start 2.94 -0.37) (end 2.94 -1.05) (layer Dwgs.User) (width 0.12))
     
-      (fp_line (start -1.6 -0.7) (end -0.8 -1.4) (layer Dwgs.User) (width 0.12))
-      (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
-      (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
-      (pad 2 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 15 "LED_4"))
-      (pad 1 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
-      (pad 3 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 17 "LED_3"))
+        (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
+        (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
+        (pad 2 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 15 "LED_4"))
+        (pad 1 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 17 "LED_3"))
       
-      (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-    )
+    (fp_line (start -0.8 -1.4) (end -0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 0.8 -1.4) (end 0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start -1 -1.4) (end -1 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 1 -1.4) (end 1 1.4) (layer Dwgs.User) (width 0.12))
+    
+        (fp_poly
+          (pts
+            (xy 1.6 -1.05)
+            (xy 2.94 -1.05)
+            (xy 2.94 -0.37)
+            (xy 1.6 -0.37)
+            (xy 1.6 0.35)
+            (xy 2.94 0.35)
+            (xy 2.94 1.03)
+            (xy 1.6 1.03)
+            (xy 1.6 1.4)
+            (xy -1.6 1.4)
+            (xy -1.6 1.03)
+            (xy -2.94 1.03)
+            (xy -2.94 0.35)
+            (xy -1.6 0.35)
+            (xy -1.6 -0.37)
+            (xy -2.94 -0.37)
+            (xy -2.94 -1.05)
+            (xy -1.6 -1.05)
+            (xy -1.6 -1.4)
+            (xy 1.6 -1.4)
+          )
+          (width 0.1) (fill none) (layer "B.CrtYd"))
+    
+        (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+      )
+    
+      (zone (net 0) (net_name "") (layers "F&B.Cu") (hatch edge 0.3)
+        (connect_pads (clearance 0))
+        (min_thickness 0.25)
+        (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
+        (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
+        (polygon
+          (pts
+            (xy 58.00 118.40)
+            (xy 62.00 118.40)
+            (xy 62.00 122.10)
+            (xy 58.00 122.10)
+          )
+        )
+      )
     
 
-      (module "YS-SK6812MINI-E" (layer B.Cu) (tedit 5F70BC98)
+      (module "ceoloide:YS-SK6812MINI-E (per-key)" (layer B.Cu) (tedit 5F70BC98)
         (at 79 120.25 0)
 
-        (fp_text reference "LED2" (at 0.2 11.2) (layer B.SilkS) hide
-          (effects (font (size 1 1) (thickness 0.15)))
+        (fp_text reference "LED2" (at -4.75 0 90) (layer B.SilkS) hide
+          (effects (font (size 1 1) (thickness 0.153)))
         )
 
         (fp_line (start -1.6 -1.4) (end 1.6 -1.4) (layer Dwgs.User) (width 0.12))
@@ -588,26 +632,70 @@
         (fp_line (start 2.94 -1.05) (end 1.6 -1.05) (layer Dwgs.User) (width 0.12))
         (fp_line (start 2.94 -0.37) (end 2.94 -1.05) (layer Dwgs.User) (width 0.12))
     
-      (fp_line (start -1.6 -0.7) (end -0.8 -1.4) (layer Dwgs.User) (width 0.12))
-      (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
-      (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
-      (pad 2 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 18 "LED_5"))
-      (pad 1 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
-      (pad 3 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 15 "LED_4"))
+        (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
+        (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
+        (pad 2 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 18 "LED_5"))
+        (pad 1 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 15 "LED_4"))
       
-      (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-    )
+    (fp_line (start -0.8 -1.4) (end -0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 0.8 -1.4) (end 0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start -1 -1.4) (end -1 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 1 -1.4) (end 1 1.4) (layer Dwgs.User) (width 0.12))
+    
+        (fp_poly
+          (pts
+            (xy 1.6 -1.05)
+            (xy 2.94 -1.05)
+            (xy 2.94 -0.37)
+            (xy 1.6 -0.37)
+            (xy 1.6 0.35)
+            (xy 2.94 0.35)
+            (xy 2.94 1.03)
+            (xy 1.6 1.03)
+            (xy 1.6 1.4)
+            (xy -1.6 1.4)
+            (xy -1.6 1.03)
+            (xy -2.94 1.03)
+            (xy -2.94 0.35)
+            (xy -1.6 0.35)
+            (xy -1.6 -0.37)
+            (xy -2.94 -0.37)
+            (xy -2.94 -1.05)
+            (xy -1.6 -1.05)
+            (xy -1.6 -1.4)
+            (xy 1.6 -1.4)
+          )
+          (width 0.1) (fill none) (layer "B.CrtYd"))
+    
+        (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+      )
+    
+      (zone (net 0) (net_name "") (layers "F&B.Cu") (hatch edge 0.3)
+        (connect_pads (clearance 0))
+        (min_thickness 0.25)
+        (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
+        (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
+        (polygon
+          (pts
+            (xy 77.00 118.40)
+            (xy 81.00 118.40)
+            (xy 81.00 122.10)
+            (xy 77.00 122.10)
+          )
+        )
+      )
     
 
-      (module "YS-SK6812MINI-E" (layer B.Cu) (tedit 5F70BC98)
+      (module "ceoloide:YS-SK6812MINI-E (per-key)" (layer B.Cu) (tedit 5F70BC98)
         (at 79 101.25 0)
 
-        (fp_text reference "LED3" (at 0.2 11.2) (layer B.SilkS) hide
-          (effects (font (size 1 1) (thickness 0.15)))
+        (fp_text reference "LED3" (at -4.75 0 90) (layer B.SilkS) hide
+          (effects (font (size 1 1) (thickness 0.153)))
         )
 
         (fp_line (start -1.6 -1.4) (end 1.6 -1.4) (layer Dwgs.User) (width 0.12))
@@ -627,26 +715,70 @@
         (fp_line (start 2.94 -1.05) (end 1.6 -1.05) (layer Dwgs.User) (width 0.12))
         (fp_line (start 2.94 -0.37) (end 2.94 -1.05) (layer Dwgs.User) (width 0.12))
     
-      (fp_line (start -1.6 -0.7) (end -0.8 -1.4) (layer Dwgs.User) (width 0.12))
-      (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
-      (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
-      (pad 2 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 19 "LED_6"))
-      (pad 1 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
-      (pad 3 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 18 "LED_5"))
+        (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
+        (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
+        (pad 2 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 19 "LED_6"))
+        (pad 1 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 18 "LED_5"))
       
-      (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-    )
+    (fp_line (start -0.8 -1.4) (end -0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 0.8 -1.4) (end 0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start -1 -1.4) (end -1 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 1 -1.4) (end 1 1.4) (layer Dwgs.User) (width 0.12))
+    
+        (fp_poly
+          (pts
+            (xy 1.6 -1.05)
+            (xy 2.94 -1.05)
+            (xy 2.94 -0.37)
+            (xy 1.6 -0.37)
+            (xy 1.6 0.35)
+            (xy 2.94 0.35)
+            (xy 2.94 1.03)
+            (xy 1.6 1.03)
+            (xy 1.6 1.4)
+            (xy -1.6 1.4)
+            (xy -1.6 1.03)
+            (xy -2.94 1.03)
+            (xy -2.94 0.35)
+            (xy -1.6 0.35)
+            (xy -1.6 -0.37)
+            (xy -2.94 -0.37)
+            (xy -2.94 -1.05)
+            (xy -1.6 -1.05)
+            (xy -1.6 -1.4)
+            (xy 1.6 -1.4)
+          )
+          (width 0.1) (fill none) (layer "B.CrtYd"))
+    
+        (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+      )
+    
+      (zone (net 0) (net_name "") (layers "F&B.Cu") (hatch edge 0.3)
+        (connect_pads (clearance 0))
+        (min_thickness 0.25)
+        (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
+        (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
+        (polygon
+          (pts
+            (xy 77.00 99.40)
+            (xy 81.00 99.40)
+            (xy 81.00 103.10)
+            (xy 77.00 103.10)
+          )
+        )
+      )
     
 
-      (module "YS-SK6812MINI-E" (layer B.Cu) (tedit 5F70BC98)
+      (module "ceoloide:YS-SK6812MINI-E (per-key)" (layer B.Cu) (tedit 5F70BC98)
         (at 98 120.25 0)
 
-        (fp_text reference "LED4" (at 0.2 11.2) (layer B.SilkS) hide
-          (effects (font (size 1 1) (thickness 0.15)))
+        (fp_text reference "LED4" (at -4.75 0 90) (layer B.SilkS) hide
+          (effects (font (size 1 1) (thickness 0.153)))
         )
 
         (fp_line (start -1.6 -1.4) (end 1.6 -1.4) (layer Dwgs.User) (width 0.12))
@@ -666,26 +798,70 @@
         (fp_line (start 2.94 -1.05) (end 1.6 -1.05) (layer Dwgs.User) (width 0.12))
         (fp_line (start 2.94 -0.37) (end 2.94 -1.05) (layer Dwgs.User) (width 0.12))
     
-      (fp_line (start -1.6 -0.7) (end -0.8 -1.4) (layer Dwgs.User) (width 0.12))
-      (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
-      (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
-      (pad 2 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 20 "LED_10"))
-      (pad 1 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
-      (pad 3 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 21 "LED_9"))
+        (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
+        (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
+        (pad 2 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 20 "LED_10"))
+        (pad 1 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 21 "LED_9"))
       
-      (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-    )
+    (fp_line (start -0.8 -1.4) (end -0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 0.8 -1.4) (end 0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start -1 -1.4) (end -1 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 1 -1.4) (end 1 1.4) (layer Dwgs.User) (width 0.12))
+    
+        (fp_poly
+          (pts
+            (xy 1.6 -1.05)
+            (xy 2.94 -1.05)
+            (xy 2.94 -0.37)
+            (xy 1.6 -0.37)
+            (xy 1.6 0.35)
+            (xy 2.94 0.35)
+            (xy 2.94 1.03)
+            (xy 1.6 1.03)
+            (xy 1.6 1.4)
+            (xy -1.6 1.4)
+            (xy -1.6 1.03)
+            (xy -2.94 1.03)
+            (xy -2.94 0.35)
+            (xy -1.6 0.35)
+            (xy -1.6 -0.37)
+            (xy -2.94 -0.37)
+            (xy -2.94 -1.05)
+            (xy -1.6 -1.05)
+            (xy -1.6 -1.4)
+            (xy 1.6 -1.4)
+          )
+          (width 0.1) (fill none) (layer "B.CrtYd"))
+    
+        (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+      )
+    
+      (zone (net 0) (net_name "") (layers "F&B.Cu") (hatch edge 0.3)
+        (connect_pads (clearance 0))
+        (min_thickness 0.25)
+        (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
+        (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
+        (polygon
+          (pts
+            (xy 96.00 118.40)
+            (xy 100.00 118.40)
+            (xy 100.00 122.10)
+            (xy 96.00 122.10)
+          )
+        )
+      )
     
 
-      (module "YS-SK6812MINI-E" (layer B.Cu) (tedit 5F70BC98)
+      (module "ceoloide:YS-SK6812MINI-E (per-key)" (layer B.Cu) (tedit 5F70BC98)
         (at 60 63.25 0)
 
-        (fp_text reference "LED5" (at 0.2 11.2) (layer B.SilkS) hide
-          (effects (font (size 1 1) (thickness 0.15)))
+        (fp_text reference "LED5" (at -4.75 0 90) (layer B.SilkS) hide
+          (effects (font (size 1 1) (thickness 0.153)))
         )
 
         (fp_line (start -1.6 -1.4) (end 1.6 -1.4) (layer Dwgs.User) (width 0.12))
@@ -705,26 +881,70 @@
         (fp_line (start 2.94 -1.05) (end 1.6 -1.05) (layer Dwgs.User) (width 0.12))
         (fp_line (start 2.94 -0.37) (end 2.94 -1.05) (layer Dwgs.User) (width 0.12))
     
-      (fp_line (start -1.6 -0.7) (end -0.8 -1.4) (layer Dwgs.User) (width 0.12))
-      (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
-      (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
-      (pad 2 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 17 "LED_3"))
-      (pad 1 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
-      (pad 3 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 22 "LED_2"))
+        (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
+        (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
+        (pad 2 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 17 "LED_3"))
+        (pad 1 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 22 "LED_2"))
       
-      (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-    )
+    (fp_line (start -0.8 -1.4) (end -0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 0.8 -1.4) (end 0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start -1 -1.4) (end -1 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 1 -1.4) (end 1 1.4) (layer Dwgs.User) (width 0.12))
+    
+        (fp_poly
+          (pts
+            (xy 1.6 -1.05)
+            (xy 2.94 -1.05)
+            (xy 2.94 -0.37)
+            (xy 1.6 -0.37)
+            (xy 1.6 0.35)
+            (xy 2.94 0.35)
+            (xy 2.94 1.03)
+            (xy 1.6 1.03)
+            (xy 1.6 1.4)
+            (xy -1.6 1.4)
+            (xy -1.6 1.03)
+            (xy -2.94 1.03)
+            (xy -2.94 0.35)
+            (xy -1.6 0.35)
+            (xy -1.6 -0.37)
+            (xy -2.94 -0.37)
+            (xy -2.94 -1.05)
+            (xy -1.6 -1.05)
+            (xy -1.6 -1.4)
+            (xy 1.6 -1.4)
+          )
+          (width 0.1) (fill none) (layer "B.CrtYd"))
+    
+        (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+      )
+    
+      (zone (net 0) (net_name "") (layers "F&B.Cu") (hatch edge 0.3)
+        (connect_pads (clearance 0))
+        (min_thickness 0.25)
+        (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
+        (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
+        (polygon
+          (pts
+            (xy 58.00 61.40)
+            (xy 62.00 61.40)
+            (xy 62.00 65.10)
+            (xy 58.00 65.10)
+          )
+        )
+      )
     
 
-      (module "YS-SK6812MINI-E" (layer B.Cu) (tedit 5F70BC98)
+      (module "ceoloide:YS-SK6812MINI-E (per-key)" (layer B.Cu) (tedit 5F70BC98)
         (at 60 44.25 0)
 
-        (fp_text reference "LED6" (at 0.2 11.2) (layer B.SilkS) hide
-          (effects (font (size 1 1) (thickness 0.15)))
+        (fp_text reference "LED6" (at -4.75 0 90) (layer B.SilkS) hide
+          (effects (font (size 1 1) (thickness 0.153)))
         )
 
         (fp_line (start -1.6 -1.4) (end 1.6 -1.4) (layer Dwgs.User) (width 0.12))
@@ -744,26 +964,70 @@
         (fp_line (start 2.94 -1.05) (end 1.6 -1.05) (layer Dwgs.User) (width 0.12))
         (fp_line (start 2.94 -0.37) (end 2.94 -1.05) (layer Dwgs.User) (width 0.12))
     
-      (fp_line (start -1.6 -0.7) (end -0.8 -1.4) (layer Dwgs.User) (width 0.12))
-      (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
-      (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
-      (pad 2 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 22 "LED_2"))
-      (pad 1 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
-      (pad 3 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 23 "LED_1"))
+        (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
+        (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
+        (pad 2 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 22 "LED_2"))
+        (pad 1 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 23 "LED_1"))
       
-      (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-    )
+    (fp_line (start -0.8 -1.4) (end -0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 0.8 -1.4) (end 0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start -1 -1.4) (end -1 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 1 -1.4) (end 1 1.4) (layer Dwgs.User) (width 0.12))
+    
+        (fp_poly
+          (pts
+            (xy 1.6 -1.05)
+            (xy 2.94 -1.05)
+            (xy 2.94 -0.37)
+            (xy 1.6 -0.37)
+            (xy 1.6 0.35)
+            (xy 2.94 0.35)
+            (xy 2.94 1.03)
+            (xy 1.6 1.03)
+            (xy 1.6 1.4)
+            (xy -1.6 1.4)
+            (xy -1.6 1.03)
+            (xy -2.94 1.03)
+            (xy -2.94 0.35)
+            (xy -1.6 0.35)
+            (xy -1.6 -0.37)
+            (xy -2.94 -0.37)
+            (xy -2.94 -1.05)
+            (xy -1.6 -1.05)
+            (xy -1.6 -1.4)
+            (xy 1.6 -1.4)
+          )
+          (width 0.1) (fill none) (layer "B.CrtYd"))
+    
+        (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+      )
+    
+      (zone (net 0) (net_name "") (layers "F&B.Cu") (hatch edge 0.3)
+        (connect_pads (clearance 0))
+        (min_thickness 0.25)
+        (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
+        (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
+        (polygon
+          (pts
+            (xy 58.00 42.40)
+            (xy 62.00 42.40)
+            (xy 62.00 46.10)
+            (xy 58.00 46.10)
+          )
+        )
+      )
     
 
-      (module "YS-SK6812MINI-E" (layer B.Cu) (tedit 5F70BC98)
+      (module "ceoloide:YS-SK6812MINI-E (per-key)" (layer B.Cu) (tedit 5F70BC98)
         (at 79 63.25 0)
 
-        (fp_text reference "LED7" (at 0.2 11.2) (layer B.SilkS) hide
-          (effects (font (size 1 1) (thickness 0.15)))
+        (fp_text reference "LED7" (at -4.75 0 90) (layer B.SilkS) hide
+          (effects (font (size 1 1) (thickness 0.153)))
         )
 
         (fp_line (start -1.6 -1.4) (end 1.6 -1.4) (layer Dwgs.User) (width 0.12))
@@ -783,26 +1047,70 @@
         (fp_line (start 2.94 -1.05) (end 1.6 -1.05) (layer Dwgs.User) (width 0.12))
         (fp_line (start 2.94 -0.37) (end 2.94 -1.05) (layer Dwgs.User) (width 0.12))
     
-      (fp_line (start -1.6 -0.7) (end -0.8 -1.4) (layer Dwgs.User) (width 0.12))
-      (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
-      (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
-      (pad 2 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 24 "LED_7"))
-      (pad 1 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
-      (pad 3 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 19 "LED_6"))
+        (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
+        (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
+        (pad 2 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 24 "LED_7"))
+        (pad 1 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 19 "LED_6"))
       
-      (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-    )
+    (fp_line (start -0.8 -1.4) (end -0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 0.8 -1.4) (end 0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start -1 -1.4) (end -1 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 1 -1.4) (end 1 1.4) (layer Dwgs.User) (width 0.12))
+    
+        (fp_poly
+          (pts
+            (xy 1.6 -1.05)
+            (xy 2.94 -1.05)
+            (xy 2.94 -0.37)
+            (xy 1.6 -0.37)
+            (xy 1.6 0.35)
+            (xy 2.94 0.35)
+            (xy 2.94 1.03)
+            (xy 1.6 1.03)
+            (xy 1.6 1.4)
+            (xy -1.6 1.4)
+            (xy -1.6 1.03)
+            (xy -2.94 1.03)
+            (xy -2.94 0.35)
+            (xy -1.6 0.35)
+            (xy -1.6 -0.37)
+            (xy -2.94 -0.37)
+            (xy -2.94 -1.05)
+            (xy -1.6 -1.05)
+            (xy -1.6 -1.4)
+            (xy 1.6 -1.4)
+          )
+          (width 0.1) (fill none) (layer "B.CrtYd"))
+    
+        (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+      )
+    
+      (zone (net 0) (net_name "") (layers "F&B.Cu") (hatch edge 0.3)
+        (connect_pads (clearance 0))
+        (min_thickness 0.25)
+        (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
+        (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
+        (polygon
+          (pts
+            (xy 77.00 61.40)
+            (xy 81.00 61.40)
+            (xy 81.00 65.10)
+            (xy 77.00 65.10)
+          )
+        )
+      )
     
 
-      (module "YS-SK6812MINI-E" (layer B.Cu) (tedit 5F70BC98)
+      (module "ceoloide:YS-SK6812MINI-E (per-key)" (layer B.Cu) (tedit 5F70BC98)
         (at 79 44.25 0)
 
-        (fp_text reference "LED8" (at 0.2 11.2) (layer B.SilkS) hide
-          (effects (font (size 1 1) (thickness 0.15)))
+        (fp_text reference "LED8" (at -4.75 0 90) (layer B.SilkS) hide
+          (effects (font (size 1 1) (thickness 0.153)))
         )
 
         (fp_line (start -1.6 -1.4) (end 1.6 -1.4) (layer Dwgs.User) (width 0.12))
@@ -822,26 +1130,70 @@
         (fp_line (start 2.94 -1.05) (end 1.6 -1.05) (layer Dwgs.User) (width 0.12))
         (fp_line (start 2.94 -0.37) (end 2.94 -1.05) (layer Dwgs.User) (width 0.12))
     
-      (fp_line (start -1.6 -0.7) (end -0.8 -1.4) (layer Dwgs.User) (width 0.12))
-      (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
-      (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
-      (pad 2 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 23 "LED_1"))
-      (pad 1 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
-      (pad 3 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 25 "LED"))
+        (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
+        (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
+        (pad 2 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 23 "LED_1"))
+        (pad 1 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 25 "LED"))
       
-      (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-    )
+    (fp_line (start -0.8 -1.4) (end -0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 0.8 -1.4) (end 0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start -1 -1.4) (end -1 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 1 -1.4) (end 1 1.4) (layer Dwgs.User) (width 0.12))
+    
+        (fp_poly
+          (pts
+            (xy 1.6 -1.05)
+            (xy 2.94 -1.05)
+            (xy 2.94 -0.37)
+            (xy 1.6 -0.37)
+            (xy 1.6 0.35)
+            (xy 2.94 0.35)
+            (xy 2.94 1.03)
+            (xy 1.6 1.03)
+            (xy 1.6 1.4)
+            (xy -1.6 1.4)
+            (xy -1.6 1.03)
+            (xy -2.94 1.03)
+            (xy -2.94 0.35)
+            (xy -1.6 0.35)
+            (xy -1.6 -0.37)
+            (xy -2.94 -0.37)
+            (xy -2.94 -1.05)
+            (xy -1.6 -1.05)
+            (xy -1.6 -1.4)
+            (xy 1.6 -1.4)
+          )
+          (width 0.1) (fill none) (layer "B.CrtYd"))
+    
+        (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+      )
+    
+      (zone (net 0) (net_name "") (layers "F&B.Cu") (hatch edge 0.3)
+        (connect_pads (clearance 0))
+        (min_thickness 0.25)
+        (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
+        (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
+        (polygon
+          (pts
+            (xy 77.00 42.40)
+            (xy 81.00 42.40)
+            (xy 81.00 46.10)
+            (xy 77.00 46.10)
+          )
+        )
+      )
     
 
-      (module "YS-SK6812MINI-E" (layer B.Cu) (tedit 5F70BC98)
+      (module "ceoloide:YS-SK6812MINI-E (per-key)" (layer B.Cu) (tedit 5F70BC98)
         (at 98 63.25 0)
 
-        (fp_text reference "LED9" (at 0.2 11.2) (layer B.SilkS) hide
-          (effects (font (size 1 1) (thickness 0.15)))
+        (fp_text reference "LED9" (at -4.75 0 90) (layer B.SilkS) hide
+          (effects (font (size 1 1) (thickness 0.153)))
         )
 
         (fp_line (start -1.6 -1.4) (end 1.6 -1.4) (layer Dwgs.User) (width 0.12))
@@ -861,26 +1213,70 @@
         (fp_line (start 2.94 -1.05) (end 1.6 -1.05) (layer Dwgs.User) (width 0.12))
         (fp_line (start 2.94 -0.37) (end 2.94 -1.05) (layer Dwgs.User) (width 0.12))
     
-      (fp_line (start -1.6 -0.7) (end -0.8 -1.4) (layer Dwgs.User) (width 0.12))
-      (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
-      (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
-      (pad 2 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 21 "LED_9"))
-      (pad 1 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
-      (pad 3 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 26 "LED_8"))
+        (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
+        (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
+        (pad 2 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 21 "LED_9"))
+        (pad 1 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 26 "LED_8"))
       
-      (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-    )
+    (fp_line (start -0.8 -1.4) (end -0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 0.8 -1.4) (end 0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start -1 -1.4) (end -1 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 1 -1.4) (end 1 1.4) (layer Dwgs.User) (width 0.12))
+    
+        (fp_poly
+          (pts
+            (xy 1.6 -1.05)
+            (xy 2.94 -1.05)
+            (xy 2.94 -0.37)
+            (xy 1.6 -0.37)
+            (xy 1.6 0.35)
+            (xy 2.94 0.35)
+            (xy 2.94 1.03)
+            (xy 1.6 1.03)
+            (xy 1.6 1.4)
+            (xy -1.6 1.4)
+            (xy -1.6 1.03)
+            (xy -2.94 1.03)
+            (xy -2.94 0.35)
+            (xy -1.6 0.35)
+            (xy -1.6 -0.37)
+            (xy -2.94 -0.37)
+            (xy -2.94 -1.05)
+            (xy -1.6 -1.05)
+            (xy -1.6 -1.4)
+            (xy 1.6 -1.4)
+          )
+          (width 0.1) (fill none) (layer "B.CrtYd"))
+    
+        (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+      )
+    
+      (zone (net 0) (net_name "") (layers "F&B.Cu") (hatch edge 0.3)
+        (connect_pads (clearance 0))
+        (min_thickness 0.25)
+        (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
+        (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
+        (polygon
+          (pts
+            (xy 96.00 61.40)
+            (xy 100.00 61.40)
+            (xy 100.00 65.10)
+            (xy 96.00 65.10)
+          )
+        )
+      )
     
 
-      (module "YS-SK6812MINI-E" (layer B.Cu) (tedit 5F70BC98)
+      (module "ceoloide:YS-SK6812MINI-E (per-key)" (layer B.Cu) (tedit 5F70BC98)
         (at 98 44.25 0)
 
-        (fp_text reference "LED10" (at 0.2 11.2) (layer B.SilkS) hide
-          (effects (font (size 1 1) (thickness 0.15)))
+        (fp_text reference "LED10" (at -4.75 0 90) (layer B.SilkS) hide
+          (effects (font (size 1 1) (thickness 0.153)))
         )
 
         (fp_line (start -1.6 -1.4) (end 1.6 -1.4) (layer Dwgs.User) (width 0.12))
@@ -900,26 +1296,70 @@
         (fp_line (start 2.94 -1.05) (end 1.6 -1.05) (layer Dwgs.User) (width 0.12))
         (fp_line (start 2.94 -0.37) (end 2.94 -1.05) (layer Dwgs.User) (width 0.12))
     
-      (fp_line (start -1.6 -0.7) (end -0.8 -1.4) (layer Dwgs.User) (width 0.12))
-      (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
-      (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
-      (pad 2 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 26 "LED_8"))
-      (pad 1 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
-      (pad 3 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 24 "LED_7"))
+        (fp_line (start -3.8 -1.6) (end -2.2 -1.6) (layer B.SilkS) (width 0.12))
+        (fp_line (start -3.8 0) (end -3.8 -1.6) (layer B.SilkS) (width 0.12))
+        (pad 2 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 26 "LED_8"))
+        (pad 1 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 24 "LED_7"))
       
-      (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-    )
+    (fp_line (start -0.8 -1.4) (end -0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 0.8 -1.4) (end 0.8 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start -1 -1.4) (end -1 1.4) (layer Dwgs.User) (width 0.12))
+    (fp_line (start 1 -1.4) (end 1 1.4) (layer Dwgs.User) (width 0.12))
+    
+        (fp_poly
+          (pts
+            (xy 1.6 -1.05)
+            (xy 2.94 -1.05)
+            (xy 2.94 -0.37)
+            (xy 1.6 -0.37)
+            (xy 1.6 0.35)
+            (xy 2.94 0.35)
+            (xy 2.94 1.03)
+            (xy 1.6 1.03)
+            (xy 1.6 1.4)
+            (xy -1.6 1.4)
+            (xy -1.6 1.03)
+            (xy -2.94 1.03)
+            (xy -2.94 0.35)
+            (xy -1.6 0.35)
+            (xy -1.6 -0.37)
+            (xy -2.94 -0.37)
+            (xy -2.94 -1.05)
+            (xy -1.6 -1.05)
+            (xy -1.6 -1.4)
+            (xy 1.6 -1.4)
+          )
+          (width 0.1) (fill none) (layer "B.CrtYd"))
+    
+        (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+      )
+    
+      (zone (net 0) (net_name "") (layers "F&B.Cu") (hatch edge 0.3)
+        (connect_pads (clearance 0))
+        (min_thickness 0.25)
+        (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
+        (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
+        (polygon
+          (pts
+            (xy 96.00 42.40)
+            (xy 100.00 42.40)
+            (xy 100.00 46.10)
+            (xy 96.00 46.10)
+          )
+        )
+      )
     
 
-      (module "YS-SK6812MINI-E" (layer B.Cu) (tedit 5F70BC98)
+      (module "ceoloide:YS-SK6812MINI-E (underglow)" (layer B.Cu) (tedit 5F70BC98)
         (at 60 115.5 0)
 
-        (fp_text reference "LED11" (at 0.2 11.2) (layer B.SilkS) hide
-          (effects (font (size 1 1) (thickness 0.15)))
+        (fp_text reference "LED11" (at -4.75 0 90) (layer B.SilkS) hide
+          (effects (font (size 1 1) (thickness 0.153)))
         )
 
         (fp_line (start -1.6 -1.4) (end 1.6 -1.4) (layer Dwgs.User) (width 0.12))
@@ -939,26 +1379,68 @@
         (fp_line (start 2.94 -1.05) (end 1.6 -1.05) (layer Dwgs.User) (width 0.12))
         (fp_line (start 2.94 -0.37) (end 2.94 -1.05) (layer Dwgs.User) (width 0.12))
     
-      (fp_line (start 1.6 -0.7) (end 0.8 -1.4) (layer Dwgs.User) (width 0.12))
-      (fp_line (start 3.8 -1.6) (end 2.2 -1.6) (layer B.SilkS) (width 0.12))
-      (fp_line (start 3.8 0) (end 3.8 -1.6) (layer B.SilkS) (width 0.12))
-      (pad 3 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 28 "ULED_2"))
-      (pad 2 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 27 "ULED_3"))
-      (pad 1 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+    (fp_line (start -1.6 -0.7) (end -0.8 -1.4) (layer Dwgs.User) (width 0.12))
+
     
-      (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-    )
+        (fp_line (start -3.8 1.6) (end -2.2 1.6) (layer B.SilkS) (width 0.12))
+        (fp_line (start -3.8 0) (end -3.8 1.6) (layer B.SilkS) (width 0.12))
+        (pad 2 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 27 "ULED_3"))
+        (pad 1 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 28 "ULED_2"))
+    
+        (fp_poly
+          (pts
+            (xy 1.6 -1.05)
+            (xy 2.94 -1.05)
+            (xy 2.94 -0.37)
+            (xy 1.6 -0.37)
+            (xy 1.6 0.35)
+            (xy 2.94 0.35)
+            (xy 2.94 1.03)
+            (xy 1.6 1.03)
+            (xy 1.6 1.4)
+            (xy -1.6 1.4)
+            (xy -1.6 1.03)
+            (xy -2.94 1.03)
+            (xy -2.94 0.35)
+            (xy -1.6 0.35)
+            (xy -1.6 -0.37)
+            (xy -2.94 -0.37)
+            (xy -2.94 -1.05)
+            (xy -1.6 -1.05)
+            (xy -1.6 -1.4)
+            (xy 1.6 -1.4)
+          )
+          (width 0.1) (fill none) (layer "B.CrtYd"))
+    
+        (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+      )
+    
+      (zone (net 0) (net_name "") (layers "F&B.Cu") (hatch edge 0.3)
+        (connect_pads (clearance 0))
+        (min_thickness 0.25)
+        (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
+        (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
+        (polygon
+          (pts
+            (xy 58.00 113.65)
+            (xy 62.00 113.65)
+            (xy 62.00 117.35)
+            (xy 58.00 117.35)
+          )
+        )
+      )
     
 
-      (module "YS-SK6812MINI-E" (layer B.Cu) (tedit 5F70BC98)
+      (module "ceoloide:YS-SK6812MINI-E (underglow)" (layer B.Cu) (tedit 5F70BC98)
         (at 79 96.5 0)
 
-        (fp_text reference "LED12" (at 0.2 11.2) (layer B.SilkS) hide
-          (effects (font (size 1 1) (thickness 0.15)))
+        (fp_text reference "LED12" (at -4.75 0 90) (layer B.SilkS) hide
+          (effects (font (size 1 1) (thickness 0.153)))
         )
 
         (fp_line (start -1.6 -1.4) (end 1.6 -1.4) (layer Dwgs.User) (width 0.12))
@@ -978,26 +1460,68 @@
         (fp_line (start 2.94 -1.05) (end 1.6 -1.05) (layer Dwgs.User) (width 0.12))
         (fp_line (start 2.94 -0.37) (end 2.94 -1.05) (layer Dwgs.User) (width 0.12))
     
-      (fp_line (start 1.6 -0.7) (end 0.8 -1.4) (layer Dwgs.User) (width 0.12))
-      (fp_line (start 3.8 -1.6) (end 2.2 -1.6) (layer B.SilkS) (width 0.12))
-      (fp_line (start 3.8 0) (end 3.8 -1.6) (layer B.SilkS) (width 0.12))
-      (pad 3 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 29 "ULED_1"))
-      (pad 2 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 28 "ULED_2"))
-      (pad 1 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+    (fp_line (start -1.6 -0.7) (end -0.8 -1.4) (layer Dwgs.User) (width 0.12))
+
     
-      (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-    )
+        (fp_line (start -3.8 1.6) (end -2.2 1.6) (layer B.SilkS) (width 0.12))
+        (fp_line (start -3.8 0) (end -3.8 1.6) (layer B.SilkS) (width 0.12))
+        (pad 2 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 28 "ULED_2"))
+        (pad 1 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 29 "ULED_1"))
+    
+        (fp_poly
+          (pts
+            (xy 1.6 -1.05)
+            (xy 2.94 -1.05)
+            (xy 2.94 -0.37)
+            (xy 1.6 -0.37)
+            (xy 1.6 0.35)
+            (xy 2.94 0.35)
+            (xy 2.94 1.03)
+            (xy 1.6 1.03)
+            (xy 1.6 1.4)
+            (xy -1.6 1.4)
+            (xy -1.6 1.03)
+            (xy -2.94 1.03)
+            (xy -2.94 0.35)
+            (xy -1.6 0.35)
+            (xy -1.6 -0.37)
+            (xy -2.94 -0.37)
+            (xy -2.94 -1.05)
+            (xy -1.6 -1.05)
+            (xy -1.6 -1.4)
+            (xy 1.6 -1.4)
+          )
+          (width 0.1) (fill none) (layer "B.CrtYd"))
+    
+        (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+      )
+    
+      (zone (net 0) (net_name "") (layers "F&B.Cu") (hatch edge 0.3)
+        (connect_pads (clearance 0))
+        (min_thickness 0.25)
+        (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
+        (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
+        (polygon
+          (pts
+            (xy 77.00 94.65)
+            (xy 81.00 94.65)
+            (xy 81.00 98.35)
+            (xy 77.00 98.35)
+          )
+        )
+      )
     
 
-      (module "YS-SK6812MINI-E" (layer B.Cu) (tedit 5F70BC98)
+      (module "ceoloide:YS-SK6812MINI-E (underglow)" (layer B.Cu) (tedit 5F70BC98)
         (at 98 115.5 0)
 
-        (fp_text reference "LED13" (at 0.2 11.2) (layer B.SilkS) hide
-          (effects (font (size 1 1) (thickness 0.15)))
+        (fp_text reference "LED13" (at -4.75 0 90) (layer B.SilkS) hide
+          (effects (font (size 1 1) (thickness 0.153)))
         )
 
         (fp_line (start -1.6 -1.4) (end 1.6 -1.4) (layer Dwgs.User) (width 0.12))
@@ -1017,26 +1541,68 @@
         (fp_line (start 2.94 -1.05) (end 1.6 -1.05) (layer Dwgs.User) (width 0.12))
         (fp_line (start 2.94 -0.37) (end 2.94 -1.05) (layer Dwgs.User) (width 0.12))
     
-      (fp_line (start 1.6 -0.7) (end 0.8 -1.4) (layer Dwgs.User) (width 0.12))
-      (fp_line (start 3.8 -1.6) (end 2.2 -1.6) (layer B.SilkS) (width 0.12))
-      (fp_line (start 3.8 0) (end 3.8 -1.6) (layer B.SilkS) (width 0.12))
-      (pad 3 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 20 "LED_10"))
-      (pad 2 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 29 "ULED_1"))
-      (pad 1 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+    (fp_line (start -1.6 -0.7) (end -0.8 -1.4) (layer Dwgs.User) (width 0.12))
+
     
-      (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-    )
+        (fp_line (start -3.8 1.6) (end -2.2 1.6) (layer B.SilkS) (width 0.12))
+        (fp_line (start -3.8 0) (end -3.8 1.6) (layer B.SilkS) (width 0.12))
+        (pad 2 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 29 "ULED_1"))
+        (pad 1 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 20 "LED_10"))
+    
+        (fp_poly
+          (pts
+            (xy 1.6 -1.05)
+            (xy 2.94 -1.05)
+            (xy 2.94 -0.37)
+            (xy 1.6 -0.37)
+            (xy 1.6 0.35)
+            (xy 2.94 0.35)
+            (xy 2.94 1.03)
+            (xy 1.6 1.03)
+            (xy 1.6 1.4)
+            (xy -1.6 1.4)
+            (xy -1.6 1.03)
+            (xy -2.94 1.03)
+            (xy -2.94 0.35)
+            (xy -1.6 0.35)
+            (xy -1.6 -0.37)
+            (xy -2.94 -0.37)
+            (xy -2.94 -1.05)
+            (xy -1.6 -1.05)
+            (xy -1.6 -1.4)
+            (xy 1.6 -1.4)
+          )
+          (width 0.1) (fill none) (layer "B.CrtYd"))
+    
+        (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+      )
+    
+      (zone (net 0) (net_name "") (layers "F&B.Cu") (hatch edge 0.3)
+        (connect_pads (clearance 0))
+        (min_thickness 0.25)
+        (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
+        (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
+        (polygon
+          (pts
+            (xy 96.00 113.65)
+            (xy 100.00 113.65)
+            (xy 100.00 117.35)
+            (xy 96.00 117.35)
+          )
+        )
+      )
     
 
-      (module "YS-SK6812MINI-E" (layer B.Cu) (tedit 5F70BC98)
+      (module "ceoloide:YS-SK6812MINI-E (underglow)" (layer B.Cu) (tedit 5F70BC98)
         (at 60 58.5 0)
 
-        (fp_text reference "LED14" (at 0.2 11.2) (layer B.SilkS) hide
-          (effects (font (size 1 1) (thickness 0.15)))
+        (fp_text reference "LED14" (at -4.75 0 90) (layer B.SilkS) hide
+          (effects (font (size 1 1) (thickness 0.153)))
         )
 
         (fp_line (start -1.6 -1.4) (end 1.6 -1.4) (layer Dwgs.User) (width 0.12))
@@ -1056,26 +1622,68 @@
         (fp_line (start 2.94 -1.05) (end 1.6 -1.05) (layer Dwgs.User) (width 0.12))
         (fp_line (start 2.94 -0.37) (end 2.94 -1.05) (layer Dwgs.User) (width 0.12))
     
-      (fp_line (start 1.6 -0.7) (end 0.8 -1.4) (layer Dwgs.User) (width 0.12))
-      (fp_line (start 3.8 -1.6) (end 2.2 -1.6) (layer B.SilkS) (width 0.12))
-      (fp_line (start 3.8 0) (end 3.8 -1.6) (layer B.SilkS) (width 0.12))
-      (pad 3 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 27 "ULED_3"))
-      (pad 2 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 30 "ULED_4"))
-      (pad 1 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+    (fp_line (start -1.6 -0.7) (end -0.8 -1.4) (layer Dwgs.User) (width 0.12))
+
     
-      (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-    )
+        (fp_line (start -3.8 1.6) (end -2.2 1.6) (layer B.SilkS) (width 0.12))
+        (fp_line (start -3.8 0) (end -3.8 1.6) (layer B.SilkS) (width 0.12))
+        (pad 2 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 30 "ULED_4"))
+        (pad 1 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 27 "ULED_3"))
+    
+        (fp_poly
+          (pts
+            (xy 1.6 -1.05)
+            (xy 2.94 -1.05)
+            (xy 2.94 -0.37)
+            (xy 1.6 -0.37)
+            (xy 1.6 0.35)
+            (xy 2.94 0.35)
+            (xy 2.94 1.03)
+            (xy 1.6 1.03)
+            (xy 1.6 1.4)
+            (xy -1.6 1.4)
+            (xy -1.6 1.03)
+            (xy -2.94 1.03)
+            (xy -2.94 0.35)
+            (xy -1.6 0.35)
+            (xy -1.6 -0.37)
+            (xy -2.94 -0.37)
+            (xy -2.94 -1.05)
+            (xy -1.6 -1.05)
+            (xy -1.6 -1.4)
+            (xy 1.6 -1.4)
+          )
+          (width 0.1) (fill none) (layer "B.CrtYd"))
+    
+        (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+      )
+    
+      (zone (net 0) (net_name "") (layers "F&B.Cu") (hatch edge 0.3)
+        (connect_pads (clearance 0))
+        (min_thickness 0.25)
+        (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
+        (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
+        (polygon
+          (pts
+            (xy 58.00 56.65)
+            (xy 62.00 56.65)
+            (xy 62.00 60.35)
+            (xy 58.00 60.35)
+          )
+        )
+      )
     
 
-      (module "YS-SK6812MINI-E" (layer B.Cu) (tedit 5F70BC98)
+      (module "ceoloide:YS-SK6812MINI-E (underglow)" (layer B.Cu) (tedit 5F70BC98)
         (at 98 58.5 0)
 
-        (fp_text reference "LED15" (at 0.2 11.2) (layer B.SilkS) hide
-          (effects (font (size 1 1) (thickness 0.15)))
+        (fp_text reference "LED15" (at -4.75 0 90) (layer B.SilkS) hide
+          (effects (font (size 1 1) (thickness 0.153)))
         )
 
         (fp_line (start -1.6 -1.4) (end 1.6 -1.4) (layer Dwgs.User) (width 0.12))
@@ -1095,26 +1703,66 @@
         (fp_line (start 2.94 -1.05) (end 1.6 -1.05) (layer Dwgs.User) (width 0.12))
         (fp_line (start 2.94 -0.37) (end 2.94 -1.05) (layer Dwgs.User) (width 0.12))
     
-      (fp_line (start 1.6 -0.7) (end 0.8 -1.4) (layer Dwgs.User) (width 0.12))
-      (fp_line (start 3.8 -1.6) (end 2.2 -1.6) (layer B.SilkS) (width 0.12))
-      (fp_line (start 3.8 0) (end 3.8 -1.6) (layer B.SilkS) (width 0.12))
-      (pad 3 smd rect (at 2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-      (pad 4 smd rect (at 2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 30 "ULED_4"))
-      (pad 2 smd rect (at -2.65 -0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 31 "ULED_5"))
-      (pad 1 smd rect (at -2.65 0.7 0) (size 1.5 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+    (fp_line (start -1.6 -0.7) (end -0.8 -1.4) (layer Dwgs.User) (width 0.12))
+
     
-      (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-      (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
-    )
+        (fp_line (start -3.8 1.6) (end -2.2 1.6) (layer B.SilkS) (width 0.12))
+        (fp_line (start -3.8 0) (end -3.8 1.6) (layer B.SilkS) (width 0.12))
+        (pad 2 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 31 "ULED_5"))
+        (pad 1 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 30 "ULED_4"))
+    
+        (fp_poly
+          (pts
+            (xy 1.6 -1.05)
+            (xy 2.94 -1.05)
+            (xy 2.94 -0.37)
+            (xy 1.6 -0.37)
+            (xy 1.6 0.35)
+            (xy 2.94 0.35)
+            (xy 2.94 1.03)
+            (xy 1.6 1.03)
+            (xy 1.6 1.4)
+            (xy -1.6 1.4)
+            (xy -1.6 1.03)
+            (xy -2.94 1.03)
+            (xy -2.94 0.35)
+            (xy -1.6 0.35)
+            (xy -1.6 -0.37)
+            (xy -2.94 -0.37)
+            (xy -2.94 -1.05)
+            (xy -1.6 -1.05)
+            (xy -1.6 -1.4)
+            (xy 1.6 -1.4)
+          )
+          (width 0.1) (fill none) (layer "B.CrtYd"))
+    
+        (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 1.55) (end 1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+        (fp_line (start 1.8 -1.55) (end -1.8 -1.55) (layer Edge.Cuts) (width 0.12))
+      )
+    
+      (zone (net 0) (net_name "") (layers "F&B.Cu") (hatch edge 0.3)
+        (connect_pads (clearance 0))
+        (min_thickness 0.25)
+        (keepout (tracks not_allowed) (vias not_allowed) (copperpour not_allowed))
+        (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
+        (polygon
+          (pts
+            (xy 96.00 56.65)
+            (xy 100.00 56.65)
+            (xy 100.00 60.35)
+            (xy 96.00 60.35)
+          )
+        )
+      )
     
 
         (module ComboDiode (layer B.Cu) (tedit 5B24D78E)
             (at 62.16 131 0)
-            (attr virtual)
             (fp_text reference "D1" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
-            (fp_text value "" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1123,18 +1771,15 @@
             (fp_line (start -0.35 0) (end -0.35 0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.35 0) (end -0.35 -0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
-        
-            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 32 "R0"))
             (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 2 "left_down"))
+            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 32 "R0"))
         
         )
         
 
         (module ComboDiode (layer B.Cu) (tedit 5B24D78E)
             (at 81.16 131 0)
-            (attr virtual)
             (fp_text reference "D2" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
-            (fp_text value "" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1143,18 +1788,15 @@
             (fp_line (start -0.35 0) (end -0.35 0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.35 0) (end -0.35 -0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
-        
-            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 32 "R0"))
             (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 4 "middle_down"))
+            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 32 "R0"))
         
         )
         
 
         (module ComboDiode (layer B.Cu) (tedit 5B24D78E)
             (at 81.16 112 0)
-            (attr virtual)
             (fp_text reference "D3" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
-            (fp_text value "" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1163,18 +1805,15 @@
             (fp_line (start -0.35 0) (end -0.35 0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.35 0) (end -0.35 -0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
-        
-            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 33 "R1"))
             (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 5 "middle_up"))
+            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 33 "R1"))
         
         )
         
 
         (module ComboDiode (layer B.Cu) (tedit 5B24D78E)
             (at 100.16 131 0)
-            (attr virtual)
             (fp_text reference "D4" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
-            (fp_text value "" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1183,18 +1822,15 @@
             (fp_line (start -0.35 0) (end -0.35 0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.35 0) (end -0.35 -0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
-        
-            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 32 "R0"))
             (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 7 "right_down"))
+            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 32 "R0"))
         
         )
         
 
         (module ComboDiode (layer B.Cu) (tedit 5B24D78E)
             (at 62.16 74 0)
-            (attr virtual)
             (fp_text reference "D5" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
-            (fp_text value "" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1203,18 +1839,15 @@
             (fp_line (start -0.35 0) (end -0.35 0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.35 0) (end -0.35 -0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
-        
-            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 34 "R3"))
             (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 8 "first_bottom"))
+            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 34 "R3"))
         
         )
         
 
         (module ComboDiode (layer B.Cu) (tedit 5B24D78E)
             (at 62.16 55 0)
-            (attr virtual)
             (fp_text reference "D6" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
-            (fp_text value "" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1223,18 +1856,15 @@
             (fp_line (start -0.35 0) (end -0.35 0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.35 0) (end -0.35 -0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
-        
-            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 35 "R4"))
             (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 9 "first_top"))
+            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 35 "R4"))
         
         )
         
 
         (module ComboDiode (layer B.Cu) (tedit 5B24D78E)
             (at 81.16 74 0)
-            (attr virtual)
             (fp_text reference "D7" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
-            (fp_text value "" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1243,18 +1873,15 @@
             (fp_line (start -0.35 0) (end -0.35 0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.35 0) (end -0.35 -0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
-        
-            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 34 "R3"))
             (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 10 "second_bottom"))
+            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 34 "R3"))
         
         )
         
 
         (module ComboDiode (layer B.Cu) (tedit 5B24D78E)
             (at 81.16 55 0)
-            (attr virtual)
             (fp_text reference "D8" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
-            (fp_text value "" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1263,18 +1890,15 @@
             (fp_line (start -0.35 0) (end -0.35 0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.35 0) (end -0.35 -0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
-        
-            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 35 "R4"))
             (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 11 "second_top"))
+            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 35 "R4"))
         
         )
         
 
         (module ComboDiode (layer B.Cu) (tedit 5B24D78E)
             (at 100.16 74 0)
-            (attr virtual)
             (fp_text reference "D9" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
-            (fp_text value "" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1283,18 +1907,15 @@
             (fp_line (start -0.35 0) (end -0.35 0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.35 0) (end -0.35 -0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
-        
-            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 34 "R3"))
             (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 12 "third_bottom"))
+            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 34 "R3"))
         
         )
         
 
         (module ComboDiode (layer B.Cu) (tedit 5B24D78E)
             (at 100.16 55 0)
-            (attr virtual)
             (fp_text reference "D10" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
-            (fp_text value "" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1303,9 +1924,8 @@
             (fp_line (start -0.35 0) (end -0.35 0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.35 0) (end -0.35 -0.55) (layer B.SilkS) (width 0.1))
             (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
-        
-            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 35 "R4"))
             (pad 2 smd rect (at 1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 13 "third_top"))
+            (pad 1 smd rect (at -1.65 0 0) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) (net 35 "R4"))
         
         )
         
