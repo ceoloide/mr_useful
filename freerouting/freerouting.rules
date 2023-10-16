@@ -15,17 +15,17 @@
       (active on)
       (preferred_direction horizontal)
       (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 2.5)
+      (against_preferred_direction_trace_costs 1.25)
     )
     (layer_rule B.Cu
       (active on)
       (preferred_direction vertical)
       (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 1.7)
+      (against_preferred_direction_trace_costs 1.25)
     )
   )
   (rule
-    (width 250.0)
+    (width 150.0)
     (clear 200.2)
     (clear 125.0 (type smd_to_turn_gap))
     (clear 50.0 (type smd_smd))
@@ -55,7 +55,7 @@
     (clearance_class default)
     (via_rule default)
     (rule
-      (width 250.0)
+      (width 150.0)
     )
     (circuit 
       (use_layer F.Cu B.Cu)
@@ -68,6 +68,17 @@
     "P0" "P1" "P2" "C3" "R2" "RAW"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
+    (rule
+      (width 150.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "power_ground"
+    "VCC" "GND" "RAW"
+    (clearance_class "power_ground")
+    (via_rule "power_ground")
     (rule
       (width 250.0)
     )
