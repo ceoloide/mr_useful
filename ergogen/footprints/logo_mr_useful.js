@@ -11,10 +11,10 @@ module.exports = {
       (fp_text reference "${p.ref}" (at 0 0) (layer ${p.side}.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
       (fp_text value "" (at 0 0) (layer ${p.side}.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
       (fp_text user "${p.text_line_1}" (at 0 1) (layer "${p.side}.SilkS")
-          (effects (font (size 1 1) (thickness 0.1)) (justify bottom))
+          (effects (font (size 1 1) (thickness 0.153)) (justify bottom))
       )
       (fp_text user "${p.text_line_2}" (at 0 3) (layer "${p.side}.SilkS")
-          (effects (font (size 1 1) (thickness 0.1)) (justify bottom))
+          (effects (font (size 1 1) (thickness 0.153)) (justify bottom))
       )
       (fp_poly
         (pts
