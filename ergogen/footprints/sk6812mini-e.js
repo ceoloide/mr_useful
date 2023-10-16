@@ -43,7 +43,7 @@ module.exports = {
             nx = (cos * (adj_x - at_x)) + (sin * (adj_y - at_y)) + at_x,
             ny = (cos * (adj_y - at_y)) - (sin * (adj_x - at_x)) + at_y;
 
-        const point_str = `${nx.toFixed(2)} ${ny.toFixed(2)}`;
+        const point_str = `${nx.toFixed(3)} ${ny.toFixed(3)}`;
         return point_str;
     }
     
@@ -204,7 +204,7 @@ module.exports = {
             (xy -1.6 -1.4)
             (xy 1.6 -1.4)
           )
-          (width 0.1) (fill none) (layer "B.CrtYd"))
+          (width 0.1) (layer "B.CrtYd"))
     `
 
     const courtyard_back = `
@@ -231,7 +231,7 @@ module.exports = {
             (xy -1.6 -1.4)
             (xy 1.6 -1.4)
           )
-          (width 0.1) (fill none) (layer "B.CrtYd"))
+          (width 0.1) (layer "B.CrtYd"))
     `
 
     const keepout = `
