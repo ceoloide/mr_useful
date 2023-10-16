@@ -399,6 +399,7 @@ pcbs:
           reverse_mount: false
         adjust:
           shift: [0, vertical_underglow_shift]
+          rotate: led_rotation + 180
 
       diodes:
         what: combo_diode
