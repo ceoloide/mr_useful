@@ -584,7 +584,7 @@
             (xy -1.6 -1.4)
             (xy 1.6 -1.4)
           )
-          (width 0.1) (fill none) (layer "B.CrtYd"))
+          (width 0.1) (layer "B.CrtYd"))
     
         (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
         (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -599,10 +599,10 @@
         (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
         (polygon
           (pts
-            (xy 58.00 118.40)
-            (xy 62.00 118.40)
-            (xy 62.00 122.10)
-            (xy 58.00 122.10)
+            (xy 58.000 118.400)
+            (xy 62.000 118.400)
+            (xy 62.000 122.100)
+            (xy 58.000 122.100)
           )
         )
       )
@@ -667,7 +667,7 @@
             (xy -1.6 -1.4)
             (xy 1.6 -1.4)
           )
-          (width 0.1) (fill none) (layer "B.CrtYd"))
+          (width 0.1) (layer "B.CrtYd"))
     
         (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
         (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -682,10 +682,10 @@
         (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
         (polygon
           (pts
-            (xy 77.00 118.40)
-            (xy 81.00 118.40)
-            (xy 81.00 122.10)
-            (xy 77.00 122.10)
+            (xy 77.000 118.400)
+            (xy 81.000 118.400)
+            (xy 81.000 122.100)
+            (xy 77.000 122.100)
           )
         )
       )
@@ -750,7 +750,7 @@
             (xy -1.6 -1.4)
             (xy 1.6 -1.4)
           )
-          (width 0.1) (fill none) (layer "B.CrtYd"))
+          (width 0.1) (layer "B.CrtYd"))
     
         (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
         (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -765,10 +765,10 @@
         (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
         (polygon
           (pts
-            (xy 77.00 99.40)
-            (xy 81.00 99.40)
-            (xy 81.00 103.10)
-            (xy 77.00 103.10)
+            (xy 77.000 99.400)
+            (xy 81.000 99.400)
+            (xy 81.000 103.100)
+            (xy 77.000 103.100)
           )
         )
       )
@@ -833,7 +833,7 @@
             (xy -1.6 -1.4)
             (xy 1.6 -1.4)
           )
-          (width 0.1) (fill none) (layer "B.CrtYd"))
+          (width 0.1) (layer "B.CrtYd"))
     
         (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
         (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -848,10 +848,10 @@
         (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
         (polygon
           (pts
-            (xy 96.00 118.40)
-            (xy 100.00 118.40)
-            (xy 100.00 122.10)
-            (xy 96.00 122.10)
+            (xy 96.000 118.400)
+            (xy 100.000 118.400)
+            (xy 100.000 122.100)
+            (xy 96.000 122.100)
           )
         )
       )
@@ -916,7 +916,7 @@
             (xy -1.6 -1.4)
             (xy 1.6 -1.4)
           )
-          (width 0.1) (fill none) (layer "B.CrtYd"))
+          (width 0.1) (layer "B.CrtYd"))
     
         (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
         (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -931,10 +931,10 @@
         (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
         (polygon
           (pts
-            (xy 58.00 61.40)
-            (xy 62.00 61.40)
-            (xy 62.00 65.10)
-            (xy 58.00 65.10)
+            (xy 58.000 61.400)
+            (xy 62.000 61.400)
+            (xy 62.000 65.100)
+            (xy 58.000 65.100)
           )
         )
       )
@@ -999,7 +999,7 @@
             (xy -1.6 -1.4)
             (xy 1.6 -1.4)
           )
-          (width 0.1) (fill none) (layer "B.CrtYd"))
+          (width 0.1) (layer "B.CrtYd"))
     
         (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
         (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -1014,10 +1014,10 @@
         (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
         (polygon
           (pts
-            (xy 58.00 42.40)
-            (xy 62.00 42.40)
-            (xy 62.00 46.10)
-            (xy 58.00 46.10)
+            (xy 58.000 42.400)
+            (xy 62.000 42.400)
+            (xy 62.000 46.100)
+            (xy 58.000 46.100)
           )
         )
       )
@@ -1082,7 +1082,7 @@
             (xy -1.6 -1.4)
             (xy 1.6 -1.4)
           )
-          (width 0.1) (fill none) (layer "B.CrtYd"))
+          (width 0.1) (layer "B.CrtYd"))
     
         (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
         (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -1097,10 +1097,10 @@
         (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
         (polygon
           (pts
-            (xy 77.00 61.40)
-            (xy 81.00 61.40)
-            (xy 81.00 65.10)
-            (xy 77.00 65.10)
+            (xy 77.000 61.400)
+            (xy 81.000 61.400)
+            (xy 81.000 65.100)
+            (xy 77.000 65.100)
           )
         )
       )
@@ -1165,7 +1165,7 @@
             (xy -1.6 -1.4)
             (xy 1.6 -1.4)
           )
-          (width 0.1) (fill none) (layer "B.CrtYd"))
+          (width 0.1) (layer "B.CrtYd"))
     
         (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
         (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -1180,10 +1180,10 @@
         (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
         (polygon
           (pts
-            (xy 77.00 42.40)
-            (xy 81.00 42.40)
-            (xy 81.00 46.10)
-            (xy 77.00 46.10)
+            (xy 77.000 42.400)
+            (xy 81.000 42.400)
+            (xy 81.000 46.100)
+            (xy 77.000 46.100)
           )
         )
       )
@@ -1248,7 +1248,7 @@
             (xy -1.6 -1.4)
             (xy 1.6 -1.4)
           )
-          (width 0.1) (fill none) (layer "B.CrtYd"))
+          (width 0.1) (layer "B.CrtYd"))
     
         (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
         (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -1263,10 +1263,10 @@
         (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
         (polygon
           (pts
-            (xy 96.00 61.40)
-            (xy 100.00 61.40)
-            (xy 100.00 65.10)
-            (xy 96.00 65.10)
+            (xy 96.000 61.400)
+            (xy 100.000 61.400)
+            (xy 100.000 65.100)
+            (xy 96.000 65.100)
           )
         )
       )
@@ -1331,7 +1331,7 @@
             (xy -1.6 -1.4)
             (xy 1.6 -1.4)
           )
-          (width 0.1) (fill none) (layer "B.CrtYd"))
+          (width 0.1) (layer "B.CrtYd"))
     
         (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
         (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -1346,17 +1346,17 @@
         (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
         (polygon
           (pts
-            (xy 96.00 42.40)
-            (xy 100.00 42.40)
-            (xy 100.00 46.10)
-            (xy 96.00 46.10)
+            (xy 96.000 42.400)
+            (xy 100.000 42.400)
+            (xy 100.000 46.100)
+            (xy 96.000 46.100)
           )
         )
       )
     
 
       (module "ceoloide:YS-SK6812MINI-E (underglow)" (layer B.Cu) (tedit 5F70BC98)
-        (at 60 115.5 0)
+        (at 60 115.5 180)
 
         (fp_text reference "LED11" (at -4.75 0 90) (layer B.SilkS) hide
           (effects (font (size 1 1) (thickness 0.153)))
@@ -1384,10 +1384,10 @@
     
         (fp_line (start -3.8 1.6) (end -2.2 1.6) (layer B.SilkS) (width 0.12))
         (fp_line (start -3.8 0) (end -3.8 1.6) (layer B.SilkS) (width 0.12))
-        (pad 2 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 27 "ULED_3"))
-        (pad 1 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
-        (pad 3 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-        (pad 4 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 28 "ULED_2"))
+        (pad 2 smd rect (at 2.70 0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 27 "ULED_3"))
+        (pad 1 smd rect (at 2.70 -0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 -0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 28 "ULED_2"))
     
         (fp_poly
           (pts
@@ -1412,7 +1412,7 @@
             (xy -1.6 -1.4)
             (xy 1.6 -1.4)
           )
-          (width 0.1) (fill none) (layer "B.CrtYd"))
+          (width 0.1) (layer "B.CrtYd"))
     
         (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
         (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -1427,17 +1427,17 @@
         (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
         (polygon
           (pts
-            (xy 58.00 113.65)
-            (xy 62.00 113.65)
-            (xy 62.00 117.35)
-            (xy 58.00 117.35)
+            (xy 62.000 117.350)
+            (xy 58.000 117.350)
+            (xy 58.000 113.650)
+            (xy 62.000 113.650)
           )
         )
       )
     
 
       (module "ceoloide:YS-SK6812MINI-E (underglow)" (layer B.Cu) (tedit 5F70BC98)
-        (at 79 96.5 0)
+        (at 79 96.5 180)
 
         (fp_text reference "LED12" (at -4.75 0 90) (layer B.SilkS) hide
           (effects (font (size 1 1) (thickness 0.153)))
@@ -1465,10 +1465,10 @@
     
         (fp_line (start -3.8 1.6) (end -2.2 1.6) (layer B.SilkS) (width 0.12))
         (fp_line (start -3.8 0) (end -3.8 1.6) (layer B.SilkS) (width 0.12))
-        (pad 2 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 28 "ULED_2"))
-        (pad 1 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
-        (pad 3 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-        (pad 4 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 29 "ULED_1"))
+        (pad 2 smd rect (at 2.70 0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 28 "ULED_2"))
+        (pad 1 smd rect (at 2.70 -0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 -0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 29 "ULED_1"))
     
         (fp_poly
           (pts
@@ -1493,7 +1493,7 @@
             (xy -1.6 -1.4)
             (xy 1.6 -1.4)
           )
-          (width 0.1) (fill none) (layer "B.CrtYd"))
+          (width 0.1) (layer "B.CrtYd"))
     
         (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
         (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -1508,17 +1508,17 @@
         (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
         (polygon
           (pts
-            (xy 77.00 94.65)
-            (xy 81.00 94.65)
-            (xy 81.00 98.35)
-            (xy 77.00 98.35)
+            (xy 81.000 98.350)
+            (xy 77.000 98.350)
+            (xy 77.000 94.650)
+            (xy 81.000 94.650)
           )
         )
       )
     
 
       (module "ceoloide:YS-SK6812MINI-E (underglow)" (layer B.Cu) (tedit 5F70BC98)
-        (at 98 115.5 0)
+        (at 98 115.5 180)
 
         (fp_text reference "LED13" (at -4.75 0 90) (layer B.SilkS) hide
           (effects (font (size 1 1) (thickness 0.153)))
@@ -1546,10 +1546,10 @@
     
         (fp_line (start -3.8 1.6) (end -2.2 1.6) (layer B.SilkS) (width 0.12))
         (fp_line (start -3.8 0) (end -3.8 1.6) (layer B.SilkS) (width 0.12))
-        (pad 2 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 29 "ULED_1"))
-        (pad 1 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
-        (pad 3 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-        (pad 4 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 20 "LED_10"))
+        (pad 2 smd rect (at 2.70 0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 29 "ULED_1"))
+        (pad 1 smd rect (at 2.70 -0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 -0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 20 "LED_10"))
     
         (fp_poly
           (pts
@@ -1574,7 +1574,7 @@
             (xy -1.6 -1.4)
             (xy 1.6 -1.4)
           )
-          (width 0.1) (fill none) (layer "B.CrtYd"))
+          (width 0.1) (layer "B.CrtYd"))
     
         (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
         (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -1589,17 +1589,17 @@
         (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
         (polygon
           (pts
-            (xy 96.00 113.65)
-            (xy 100.00 113.65)
-            (xy 100.00 117.35)
-            (xy 96.00 117.35)
+            (xy 100.000 117.350)
+            (xy 96.000 117.350)
+            (xy 96.000 113.650)
+            (xy 100.000 113.650)
           )
         )
       )
     
 
       (module "ceoloide:YS-SK6812MINI-E (underglow)" (layer B.Cu) (tedit 5F70BC98)
-        (at 60 58.5 0)
+        (at 60 58.5 180)
 
         (fp_text reference "LED14" (at -4.75 0 90) (layer B.SilkS) hide
           (effects (font (size 1 1) (thickness 0.153)))
@@ -1627,10 +1627,10 @@
     
         (fp_line (start -3.8 1.6) (end -2.2 1.6) (layer B.SilkS) (width 0.12))
         (fp_line (start -3.8 0) (end -3.8 1.6) (layer B.SilkS) (width 0.12))
-        (pad 2 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 30 "ULED_4"))
-        (pad 1 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
-        (pad 3 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-        (pad 4 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 27 "ULED_3"))
+        (pad 2 smd rect (at 2.70 0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 30 "ULED_4"))
+        (pad 1 smd rect (at 2.70 -0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 -0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 27 "ULED_3"))
     
         (fp_poly
           (pts
@@ -1655,7 +1655,7 @@
             (xy -1.6 -1.4)
             (xy 1.6 -1.4)
           )
-          (width 0.1) (fill none) (layer "B.CrtYd"))
+          (width 0.1) (layer "B.CrtYd"))
     
         (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
         (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -1670,17 +1670,17 @@
         (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
         (polygon
           (pts
-            (xy 58.00 56.65)
-            (xy 62.00 56.65)
-            (xy 62.00 60.35)
-            (xy 58.00 60.35)
+            (xy 62.000 60.350)
+            (xy 58.000 60.350)
+            (xy 58.000 56.650)
+            (xy 62.000 56.650)
           )
         )
       )
     
 
       (module "ceoloide:YS-SK6812MINI-E (underglow)" (layer B.Cu) (tedit 5F70BC98)
-        (at 98 58.5 0)
+        (at 98 58.5 180)
 
         (fp_text reference "LED15" (at -4.75 0 90) (layer B.SilkS) hide
           (effects (font (size 1 1) (thickness 0.153)))
@@ -1708,10 +1708,10 @@
     
         (fp_line (start -3.8 1.6) (end -2.2 1.6) (layer B.SilkS) (width 0.12))
         (fp_line (start -3.8 0) (end -3.8 1.6) (layer B.SilkS) (width 0.12))
-        (pad 2 smd rect (at 2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 31 "ULED_5"))
-        (pad 1 smd rect (at 2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
-        (pad 3 smd rect (at -2.70 0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
-        (pad 4 smd rect (at -2.70 -0.7 0) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 30 "ULED_4"))
+        (pad 2 smd rect (at 2.70 0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 31 "ULED_5"))
+        (pad 1 smd rect (at 2.70 -0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 14 "VCC"))
+        (pad 3 smd rect (at -2.70 0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 16 "GND"))
+        (pad 4 smd rect (at -2.70 -0.7 180) (size 1.4 1) (layers B.Cu B.Paste B.Mask) (net 30 "ULED_4"))
     
         (fp_poly
           (pts
@@ -1736,7 +1736,7 @@
             (xy -1.6 -1.4)
             (xy 1.6 -1.4)
           )
-          (width 0.1) (fill none) (layer "B.CrtYd"))
+          (width 0.1) (layer "B.CrtYd"))
     
         (fp_line (start -1.8 -1.55) (end -1.8 1.55) (layer Edge.Cuts) (width 0.12))
         (fp_line (start -1.8 1.55) (end 1.8 1.55) (layer Edge.Cuts) (width 0.12))
@@ -1751,10 +1751,10 @@
         (fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
         (polygon
           (pts
-            (xy 96.00 56.65)
-            (xy 100.00 56.65)
-            (xy 100.00 60.35)
-            (xy 96.00 60.35)
+            (xy 100.000 60.350)
+            (xy 96.000 60.350)
+            (xy 96.000 56.650)
+            (xy 100.000 56.650)
           )
         )
       )
@@ -2011,10 +2011,10 @@
       (fp_text reference "LOGO1" (at 0 0) (layer F.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
       (fp_text value "" (at 0 0) (layer F.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
       (fp_text user "github.com/ceoloide/mr_useful" (at 0 1) (layer "F.SilkS")
-          (effects (font (size 1 1) (thickness 0.1)) (justify bottom))
+          (effects (font (size 1 1) (thickness 0.153)) (justify bottom))
       )
       (fp_text user "v0.1 pre-release" (at 0 3) (layer "F.SilkS")
-          (effects (font (size 1 1) (thickness 0.1)) (justify bottom))
+          (effects (font (size 1 1) (thickness 0.153)) (justify bottom))
       )
       (fp_poly
         (pts
