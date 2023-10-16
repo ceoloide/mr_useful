@@ -57,5 +57,5 @@ jobs:
       - name: Persist output
         uses: actions/upload-artifact@v3
         with:
-          name: mr_useful_unrouted
+          name: mr_useful
           path: ergogen/output
