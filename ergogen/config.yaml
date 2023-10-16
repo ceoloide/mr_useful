@@ -436,5 +436,15 @@ pcbs:
         params:
           text_line_1: *kb_url
           text_line_2: *kb_ref
+          side: F
+        adjust:
+          shift: [0,1 ks]
+      
+      jlcpcb_order_number_text:
+        what: infused-kim/text
+        where: arrows_middle_up
+        params:
+          text: JLCJLCJLCJLC
+          side: B
         adjust:
           shift: [0,1 ks]
