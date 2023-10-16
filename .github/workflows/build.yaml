@@ -44,14 +44,14 @@ jobs:
         uses: ./.github/actions/autoroute
         with:
           boards: mr_useful
-      # - name: Import SES
-      #   uses: ./.github/actions/import-ses
-      #   with:
-      #     boards: mr_useful
-      # - name: DRC check
-      #   uses: ./.github/actions/run-drc
-      #   with:
-      #     boards: mr_useful
+      - name: Import SES
+        uses: ./.github/actions/import-ses
+        with:
+          boards: mr_useful
+      - name: Run KiBot to generate images, gerbers for the autorouted board
+        uses: ./.github/actions/kibot
+        with:
+          boards: mr_useful_autorouted
       - name: Persist output
         uses: actions/upload-artifact@v3
         with:
