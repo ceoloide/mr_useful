@@ -4,7 +4,7 @@
   )
   (autoroute_settings
     (fanout off)
-    (app.freerouting.autoroute on)
+    (autoroute on)
     (postroute on)
     (vias on)
     (via_costs 50)
@@ -46,18 +46,23 @@
   (via 
     "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
   )
+  (via 
+    "Via[0-1]_800:400_um-power_ground" "Via[0-1]_800:400_um" "power_ground"
+  )
   (via_rule
     default "Via[0-1]_800:400_um"
   )
   (via_rule
     "kicad_default" "Via[0-1]_800:400_um-kicad_default"
   )
+  (via_rule
+    "power_ground" "Via[0-1]_800:400_um-power_ground"
+  )
   (class default
     (clearance_class default)
     (via_rule default)
     (rule
       (width 150.0)
-      (clear 200.1)
     )
     (circuit 
       (use_layer F.Cu B.Cu)
@@ -65,29 +70,27 @@
   )
   (class "kicad_default"
     "" "C0" "left_down" "C1" "middle_down" "middle_up" "C2" "right_down" "first_bottom" "first_top" "second_bottom"
-    "second_top" "third_bottom" "third_top" "VCC" "LED_4" "GND" "LED_3" "LED_5" "LED_6" "LED_10" "LED_9" "LED_2" "LED_1"
-    "LED_7" "LED" "LED_8" "ULED_3" "ULED_2" "ULED_1" "ULED_4" "ULED_5" "R0" "R1" "R3" "R4" "VIN" "SWDIO" "SWDCLK" "RST"
-    "P0" "P1" "P2" "C3" "R2" "RAW"
+    "second_top" "third_bottom" "third_top" "LED_4" "LED_3" "LED_5" "LED_6" "LED_10" "LED_9" "LED_2" "LED_1"
+    "LED_7" "LED" "LED_8" "ULED_3" "ULED_2" "ULED_1" "ULED_4" "ULED_5" "R0" "R1" "R3" "R4" "SWDIO" "SWDCLK" "RST"
+    "P0" "P1" "P2" "C3" "R2"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
       (width 150.0)
-      (clear 200.1)
     )
     (circuit 
-      (use_via Via[0-1]_800:400_um)
+      (use_layer F.Cu B.Cu)
     )
   )
   (class "power_ground"
-    "VCC" "GND" "RAW"
+    "VCC" "GND" "RAW" "VIN"
     (clearance_class "power_ground")
     (via_rule "power_ground")
     (rule
       (width 250.0)
-      (clear 200.1)
     )
     (circuit 
-      (use_via Via[0-1]_800:400_um)
+      (use_layer F.Cu B.Cu)
     )
   )
 )
