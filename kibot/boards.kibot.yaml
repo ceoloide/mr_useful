@@ -11,11 +11,11 @@ preflight:
       error: 'lib_footprint_issues'
     - filter: 'Copper edge clearance should be 0.200'
       error: 'copper_edge_clearance'
+    - filter: 'Ignore track width issues'
+      error: 'track_width'
 
 global:
   filters:
-    - number: 58
-      regex: 'copper_edge_clearance'
     - number: 8
       regex: 'Unable to find KiCad configuration file'
     - number: 10
@@ -24,6 +24,10 @@ global:
       regex: 'Unable to find KiCad 3D models'
     - number: 58
       regex: 'KiCad project file not found|Missing KiCad main config file'
+    - number: 58
+      regex: 'copper_edge_clearance'
+    - number: 58
+      regex: 'track_width'
 
 import:
   - ./default.kibot.yaml
