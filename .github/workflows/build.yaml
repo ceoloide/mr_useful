@@ -36,7 +36,7 @@ jobs:
         uses: ./.github/actions/kibot
         with:
           boards: back_plate front_plate spacer_plate_bottom spacer_plate_top mr_useful
-          config: plates
+          config: default
       - name: Export DSN file for Freerouting
         uses: ./.github/actions/export-dsn
         with:
