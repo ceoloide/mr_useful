@@ -1,9 +1,22 @@
-# Import nixpkgs under the local binding pkgs to be able to use stdenv
-# and callPackage.
+{ pkgs ? import <nixpkgs> {}
+, board ? ""
+, dsn_path ? "ergogen/output/pcbs/${board}.dsn"
+, rules_path ? "freerouting/freerouting.rules"
+, output_path ? "ergogen/output/pcbs/${board}.ses" 
+, max_passes ? "35"
+}:
+with pkgs;
 let
-  pkgs = import <nixpkgs> {};
+  freerouting = callPackage ./freerouting {};
 in
-pkgs.stdenv.mkDerivation {
+mkShell {
   name = "freerouting-nix";
-  buildInputs = [ (pkgs.callPackage ./freerouting {}) ];
-  }
+  buildInputs = [
+    freerouting
+    gtk3
+    xvfb_run
+  ];
+  shellHook = ''
+    xvfb-run -a freerouting -de ${dsn_path} -dr ${rules_path} -do ${output_path} -mp ${max_passes} -dct 1 -da
+  '';
+}

@@ -4,6 +4,10 @@ container_cmd=docker
 # at the repo root (when running the script from there)
 container_args="-w /board -v $(pwd):/board --rm"
 
+# Define the boards to autoroute and export, and the plates
+boards="mr_useful"
+plates="back_plate front_plate spacer_plate_bottom spacer_plate_top"
+
 # Preserve manually routed files
 if [ -e ergogen/output/pcbs/*_manually_routed.kicad_pcb ]; then
     mkdir ergogen/tmp
@@ -21,17 +25,6 @@ if [ -e ergogen/tmp/*_manually_routed.kicad_pcb ]; then
     mv ergogen/tmp/*_manually_routed* ergogen/output/pcbs 
     rm -r ergogen/tmp
 fi
-
-# Define the boards to autoroute and export, and the plates
-boards="mr_useful"
-plates="back_plate front_plate spacer_plate_bottom spacer_plate_top"
-
-# Define the fabrication profile and additional flags
-fab=jlcpcb
-flags=--no-assembly
-
-# Define the pcbdraw style
-pcbdraw_style=set-black-hasl
 
 if [ ! -e freerouting/freerouting-1.8.0.jar ]; then
     curl https://github.com/freerouting/freerouting/releases/download/v1.8.0/freerouting-1.8.0.jar -L -o freerouting/freerouting-1.8.0.jar
@@ -57,9 +50,9 @@ do
     fi
     if [ -e ergogen/output/pcbs/${board}.dsn ]; then
         echo Autoroute PCB
-
-        # java -jar freerouting/freerouting-1.8.0.jar -de ergogen/output/pcbs/${board}.dsn -do ergogen/output/pcbs/${board}.ses -dr freerouting/freerouting.rules -mp 35
-        ${container_cmd} run ${container_args} soundmonster/freerouting_cli:v0.1.0 java -jar /opt/freerouting_cli.jar -de ergogen/output/pcbs/${board}.dsn -do ergogen/output/pcbs/${board}.ses -dr freerouting/freerouting.rules -mp 35
+        # java -jar freerouting/freerouting-1.8.0.jar -de ergogen/output/pcbs/${board}.dsn -do ergogen/output/pcbs/${board}.ses -dr freerouting/freerouting.rules
+        # ${container_cmd} run ${container_args} soundmonster/freerouting_cli:v0.1.0 java -jar /opt/freerouting_cli.jar -de ergogen/output/pcbs/${board}.dsn -do ergogen/output/pcbs/${board}.ses -dr freerouting/freerouting.rules -mp 30
+        ${container_cmd} run ${container_args} nixos/nix nix-shell --argstr board ${board}
     fi
     if [ -e ergogen/output/pcbs/${board}.ses ]; then
         echo "Import SES"
