@@ -11,10 +11,10 @@ in
 , gradle_7
 }:
 stdenv.mkDerivation rec {
-  pname = "freerouting";
+  name = "freerouting";
   src = fetchFromGitHub {
       owner = "freerouting";
-      repo = pname;
+      repo = name;
       rev = "89dce17"; # HEAD on Oct 19, 2023
       hash = "sha256-mhyn3UOAtP5ahrOieW4AE0WhcL5furlJyCp2WaeqGYI=";
   };
