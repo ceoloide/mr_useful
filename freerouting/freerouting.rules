@@ -15,21 +15,21 @@
       (active on)
       (preferred_direction horizontal)
       (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.5)
     )
     (layer_rule B.Cu
       (active on)
       (preferred_direction vertical)
       (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.7)
     )
   )
   (rule
     (width 150.0)
-    (clear 200.1)
-    (clear 200.1 (type default_smd))
-    (clear 125.0 (type smd_to_turn_gap))
-    (clear 50.0 (type smd_smd))
+    (clearance 200.2)
+    (clearance 125.0 (type smd_to_turn_gap))
+    (clearance 50.0 (type smd))
+    (clearance 200.2 (type "kicad_default"))
   )
   (padstack "Via[0-1]_800:400_um"
     (shape
@@ -46,17 +46,11 @@
   (via 
     "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
   )
-  (via 
-    "Via[0-1]_800:400_um-power_ground" "Via[0-1]_800:400_um" "power_ground"
-  )
   (via_rule
     default "Via[0-1]_800:400_um"
   )
   (via_rule
     "kicad_default" "Via[0-1]_800:400_um-kicad_default"
-  )
-  (via_rule
-    "power_ground" "Via[0-1]_800:400_um-power_ground"
   )
   (class default
     (clearance_class default)
@@ -74,7 +68,7 @@
     "LED_7" "LED" "LED_8" "ULED_3" "ULED_2" "ULED_1" "ULED_4" "ULED_5" "R0" "R1" "R3" "R4" "SWDIO" "SWDCLK" "RST"
     "P0" "P1" "P2" "C3" "R2"
     (clearance_class "kicad_default")
-    (via_rule kicad_default)
+    (via_rule "kicad_default")
     (rule
       (width 150.0)
     )
@@ -85,7 +79,7 @@
   (class "power_ground"
     "VCC" "GND" "RAW"
     (clearance_class "kicad_default")
-    (via_rule kicad_default)
+    (via_rule "kicad_default")
     (rule
       (width 250.0)
     )
