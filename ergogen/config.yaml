@@ -378,6 +378,8 @@ pcbs:
           P4: "{{key.led_prev}}" #DIN
           reversible: false
           reverse_mount: true
+          add_courtyard: false
+          add_keepout: false
         adjust:
           shift: [led_pos_x, led_pos_y]
           rotate: led_rotation
@@ -397,6 +399,8 @@ pcbs:
           P4: "{{key.underglow_prev}}" #DIN
           reversible: false
           reverse_mount: false
+          add_courtyard: false
+          add_keepout: false
         adjust:
           shift: [0, vertical_underglow_shift]
           rotate: led_rotation + 180
