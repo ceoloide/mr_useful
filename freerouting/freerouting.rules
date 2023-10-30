@@ -13,13 +13,13 @@
     (start_pass_no 1)
     (layer_rule F.Cu
       (active on)
-      (preferred_direction horizontal)
+      (preferred_direction vertical)
       (preferred_direction_trace_costs 1.0)
       (against_preferred_direction_trace_costs 2.5)
     )
     (layer_rule B.Cu
       (active on)
-      (preferred_direction vertical)
+      (preferred_direction horizontal)
       (preferred_direction_trace_costs 1.0)
       (against_preferred_direction_trace_costs 1.7)
     )
@@ -30,27 +30,34 @@
     (clearance 75.0 (type smd_to_turn_gap))
     (clearance 50.0 (type smd))
     (clearance 200.2 (type "kicad_default"))
+    (clearance 200.2 (type "power_ground"))
   )
-  (padstack "Via[0-1]_800:400_um"
+  (padstack "Via[0-1]_560:300_um"
     (shape
-      (circle F.Cu 800.0 0.0 0.0)
+      (circle F.Cu 560.0 0.0 0.0)
     )
     (shape
-      (circle B.Cu 800.0 0.0 0.0)
+      (circle B.Cu 560.0 0.0 0.0)
     )
     (attach off)
   )
   (via 
-    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+    "Via[0-1]_560:300_um" "Via[0-1]_560:300_um" default
   )
   (via 
-    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+    "Via[0-1]_560:300_um-kicad_default" "Via[0-1]_560:300_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_560:300_um-power_ground" "Via[0-1]_560:300_um" "power_ground"
   )
   (via_rule
-    default "Via[0-1]_800:400_um"
+    default "Via[0-1]_560:300_um"
   )
   (via_rule
-    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+    "kicad_default" "Via[0-1]_560:300_um-kicad_default"
+  )
+  (via_rule
+    "power_ground" "Via[0-1]_560:300_um-power_ground"
   )
   (class default
     (clearance_class default)
@@ -78,8 +85,8 @@
   )
   (class "power_ground"
     "VCC" "GND" "RAW"
-    (clearance_class "kicad_default")
-    (via_rule "kicad_default")
+    (clearance_class "power_ground")
+    (via_rule "power_ground")
     (rule
       (width 250.0)
     )
