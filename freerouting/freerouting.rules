@@ -27,7 +27,7 @@
   (rule
     (width 150.0)
     (clearance 200.2)
-    (clearance 125.0 (type smd_to_turn_gap))
+    (clearance 75.0 (type smd_to_turn_gap))
     (clearance 50.0 (type smd))
     (clearance 200.2 (type "kicad_default"))
   )
