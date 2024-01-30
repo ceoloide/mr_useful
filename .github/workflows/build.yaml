@@ -16,17 +16,17 @@ jobs:
     name: Generate
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: true
       - name: Docker Cache
-        uses: ScribeMD/docker-cache@0.3.3
+        uses: ScribeMD/docker-cache@0.3.7
         with:
           key: docker-${{ runner.os }}
-      - name: Use Node.js 18
-        uses: actions/setup-node@v3
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: 20.x
           cache: 'npm'
       - name: Install dependencies
         run: npm install
@@ -55,7 +55,7 @@ jobs:
           boards: mr_useful_autorouted
           config: boards
       - name: Persist output
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: mr_useful
           path: ergogen/output
