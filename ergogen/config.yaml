@@ -369,7 +369,7 @@ pcbs:
           rotate: switch_rotation
       
       per_key_leds:
-        what: sk6812mini-e
+        what: ceoloide/led_sk6812mini-e
         where: [key]
         params:
           P1: VCC
@@ -378,14 +378,14 @@ pcbs:
           P4: "{{key.led_prev}}" #DIN
           reversible: false
           reverse_mount: true
-          add_courtyard: false
-          add_keepout: false
+          include_courtyard: false
+          include_keepout: false
         adjust:
           shift: [led_pos_x, led_pos_y]
           rotate: led_rotation
       
       underglow_leds:
-        what: sk6812mini-e
+        what: ceoloide/led_sk6812mini-e
         where:
           - navigation_first_bottom
           - navigation_third_bottom
@@ -399,14 +399,14 @@ pcbs:
           P4: "{{key.underglow_prev}}" #DIN
           reversible: false
           reverse_mount: false
-          add_courtyard: false
-          add_keepout: false
+          include_courtyard: false
+          include_keepout: false
         adjust:
           shift: [0, vertical_underglow_shift]
           rotate: led_rotation + 180
 
       diodes:
-        what: combo_diode
+        what: ceoloide/diode_tht_sod123
         where: [key]
         params:
           from: "{{colrow}}"
@@ -445,7 +445,7 @@ pcbs:
           shift: [0,1 ks]
       
       jlcpcb_order_number_text:
-        what: infused-kim/text
+        what: ceoloide/text
         where: arrows_middle_up
         params:
           text: JLCJLCJLCJLC
