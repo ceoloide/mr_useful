@@ -1,32 +1,32 @@
 // Seeed Studio XIAO SAMD21 / RP2040 (aka Seeeduino Xiao) with vias for underside pads
 module.exports = {
   params: {
-      designator: 'MCU',
-      side:  'F',
-      flip: false, // False = MCU faces away from PCB - True = MCU faces PCB
-      extra_pads: false,
-      VIN:    {type: 'net', value: 'VIN'},
-      SWDIO:  {type: 'net', value: 'SWDIO'},
-      SWDCLK: {type: 'net', value: 'SWDCLK'},
-      RST:    {type: 'net', value: 'RST'},
-      GND:    {type: 'net', value: 'GND'},
-      P0:     {type: 'net', value: 'P0'},
-      P1:     {type: 'net', value: 'P1'},
-      P2:     {type: 'net', value: 'P2'},
-      P3:     {type: 'net', value: 'P3'},
-      P4:     {type: 'net', value: 'P4'},
-      P5:     {type: 'net', value: 'P5'},
-      P6:     {type: 'net', value: 'P6'},
-      P7:     {type: 'net', value: 'P7'},
-      P8:     {type: 'net', value: 'P8'},
-      P9:     {type: 'net', value: 'P9'},
-      P10:    {type: 'net', value: 'P10'},
-      RAW3V3: {type: 'net', value: 'VCC'},
-      RAW5V:  {type: 'net', value: 'RAW'},
+    designator: 'MCU',
+    side: 'F',
+    flip: false, // False = MCU faces away from PCB - True = MCU faces PCB
+    extra_pads: false,
+    VIN: { type: 'net', value: 'VIN' },
+    SWDIO: { type: 'net', value: 'SWDIO' },
+    SWDCLK: { type: 'net', value: 'SWDCLK' },
+    RST: { type: 'net', value: 'RST' },
+    GND: { type: 'net', value: 'GND' },
+    P0: { type: 'net', value: 'P0' },
+    P1: { type: 'net', value: 'P1' },
+    P2: { type: 'net', value: 'P2' },
+    P3: { type: 'net', value: 'P3' },
+    P4: { type: 'net', value: 'P4' },
+    P5: { type: 'net', value: 'P5' },
+    P6: { type: 'net', value: 'P6' },
+    P7: { type: 'net', value: 'P7' },
+    P8: { type: 'net', value: 'P8' },
+    P9: { type: 'net', value: 'P9' },
+    P10: { type: 'net', value: 'P10' },
+    RAW3V3: { type: 'net', value: 'VCC' },
+    RAW5V: { type: 'net', value: 'RAW' },
   },
-  body:   p => {
+  body: p => {
     const standard_opening = `
-    (module "Seeeduino XIAO-MOUDLE14P-2.54-21X17.8MM tht maybe" (layer "${ p.side }.Cu") (tedit 613ABEDD)
+    (module "Seeeduino XIAO-MOUDLE14P-2.54-21X17.8MM tht maybe" (layer "${p.side}.Cu") (tedit 613ABEDD)
       ${p.at /* parametric position */}
 
       (fp_text reference "${p.ref}" (at 0 6.4) (layer ${p.side}.SilkS) ${p.ref_hide}
@@ -225,23 +225,23 @@ module.exports = {
 
     let final = standard_opening;
 
-    if(p.side == "F") {
-      if(p.flip) {
+    if (p.side == "F") {
+      if (p.flip) {
         final += front_pads_flipped;
       } else {
         final += front_pads;
       }
     }
-    if(p.side == "B") {
-      if(p.flip) {
+    if (p.side == "B") {
+      if (p.flip) {
         final += back_pads_flipped;
       } else {
         final += back_pads;
       }
     }
 
-    if(p.extra_pads) {
-      if(p.flip) {
+    if (p.extra_pads) {
+      if (p.flip) {
         final += extra_pads;
       } else {
         final += extra_pads_flipped;
