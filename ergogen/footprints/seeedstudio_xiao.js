@@ -1,9 +1,33 @@
-// Seeed Studio XIAO SAMD21 / RP2040 (aka Seeeduino Xiao) with vias for underside pads
+// Copyright (c) 2023 Marco Massarelli
+//
+// SPDX-License-Identifier: MIT
+//
+// To view a copy of this license, visit https://opensource.org/license/mit/
+//
+// Author: @ceoloide
+//
+// Description:
+//  Seeed Studio XIAO SAMD21 / RP2040 (aka Seeeduino Xiao) with vias for underside pads
+//
+//  These LEDs are very tolerant of undervoltage, and are easy to solder thanks to the side
+//  legs.
+//
+// Datasheet:
+//  
+// Nets:
+//
+// Params:
+//    side: default is F for Back
+//      the side on which to place the single-side footprint and designator, either F or B
+//    flip: default is false
+//      if false, it expects the MCU to face away from the PCB, and if true it expects the
+//      opposite. This is to ensure 
+
 module.exports = {
   params: {
     designator: 'MCU',
     side: 'F',
-    flip: false, // False = MCU faces away from PCB - True = MCU faces PCB
+    flip: false,
     extra_pads: false,
     VIN: { type: 'net', value: 'VIN' },
     SWDIO: { type: 'net', value: 'SWDIO' },
