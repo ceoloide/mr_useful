@@ -969,7 +969,7 @@
         (layer B.Cu) (tedit 5F70BC98)
         (at 60 115.5 180)
 
-        (fp_text reference "LED11" (at -4.75 0 90) (layer B.SilkS) hide
+        (fp_text reference "LED11" (at -4.75 0 270) (layer B.SilkS) hide
           (effects (font (size 1 1) (thickness 0.15)))
         )
 
@@ -1011,7 +1011,7 @@
         (layer B.Cu) (tedit 5F70BC98)
         (at 79 96.5 180)
 
-        (fp_text reference "LED12" (at -4.75 0 90) (layer B.SilkS) hide
+        (fp_text reference "LED12" (at -4.75 0 270) (layer B.SilkS) hide
           (effects (font (size 1 1) (thickness 0.15)))
         )
 
@@ -1053,7 +1053,7 @@
         (layer B.Cu) (tedit 5F70BC98)
         (at 98 115.5 180)
 
-        (fp_text reference "LED13" (at -4.75 0 90) (layer B.SilkS) hide
+        (fp_text reference "LED13" (at -4.75 0 270) (layer B.SilkS) hide
           (effects (font (size 1 1) (thickness 0.15)))
         )
 
@@ -1095,7 +1095,7 @@
         (layer B.Cu) (tedit 5F70BC98)
         (at 60 58.5 180)
 
-        (fp_text reference "LED14" (at -4.75 0 90) (layer B.SilkS) hide
+        (fp_text reference "LED14" (at -4.75 0 270) (layer B.SilkS) hide
           (effects (font (size 1 1) (thickness 0.15)))
         )
 
@@ -1137,7 +1137,7 @@
         (layer B.Cu) (tedit 5F70BC98)
         (at 98 58.5 180)
 
-        (fp_text reference "LED15" (at -4.75 0 90) (layer B.SilkS) hide
+        (fp_text reference "LED15" (at -4.75 0 270) (layer B.SilkS) hide
           (effects (font (size 1 1) (thickness 0.15)))
         )
 
@@ -1177,7 +1177,7 @@
 
         (module "ceoloide:diode_tht_sod123" (layer B.Cu) (tedit 5B24D78E)
             (at 62.16 131 0)
-            (fp_text reference "D1" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
+            (fp_text reference "D1" (at 0 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1194,7 +1194,7 @@
 
         (module "ceoloide:diode_tht_sod123" (layer B.Cu) (tedit 5B24D78E)
             (at 81.16 131 0)
-            (fp_text reference "D2" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
+            (fp_text reference "D2" (at 0 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1211,7 +1211,7 @@
 
         (module "ceoloide:diode_tht_sod123" (layer B.Cu) (tedit 5B24D78E)
             (at 81.16 112 0)
-            (fp_text reference "D3" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
+            (fp_text reference "D3" (at 0 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1228,7 +1228,7 @@
 
         (module "ceoloide:diode_tht_sod123" (layer B.Cu) (tedit 5B24D78E)
             (at 100.16 131 0)
-            (fp_text reference "D4" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
+            (fp_text reference "D4" (at 0 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1245,7 +1245,7 @@
 
         (module "ceoloide:diode_tht_sod123" (layer B.Cu) (tedit 5B24D78E)
             (at 62.16 74 0)
-            (fp_text reference "D5" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
+            (fp_text reference "D5" (at 0 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1262,7 +1262,7 @@
 
         (module "ceoloide:diode_tht_sod123" (layer B.Cu) (tedit 5B24D78E)
             (at 62.16 55 0)
-            (fp_text reference "D6" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
+            (fp_text reference "D6" (at 0 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1279,7 +1279,7 @@
 
         (module "ceoloide:diode_tht_sod123" (layer B.Cu) (tedit 5B24D78E)
             (at 81.16 74 0)
-            (fp_text reference "D7" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
+            (fp_text reference "D7" (at 0 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1296,7 +1296,7 @@
 
         (module "ceoloide:diode_tht_sod123" (layer B.Cu) (tedit 5B24D78E)
             (at 81.16 55 0)
-            (fp_text reference "D8" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
+            (fp_text reference "D8" (at 0 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1313,7 +1313,7 @@
 
         (module "ceoloide:diode_tht_sod123" (layer B.Cu) (tedit 5B24D78E)
             (at 100.16 74 0)
-            (fp_text reference "D9" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
+            (fp_text reference "D9" (at 0 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
@@ -1330,7 +1330,7 @@
 
         (module "ceoloide:diode_tht_sod123" (layer B.Cu) (tedit 5B24D78E)
             (at 100.16 55 0)
-            (fp_text reference "D10" (at 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
+            (fp_text reference "D10" (at 0 0 0) (layer B.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
             (fp_line (start 0.25 0) (end 0.75 0) (layer B.SilkS) (width 0.1))
             (fp_line (start 0.25 0.4) (end -0.35 0) (layer B.SilkS) (width 0.1))
