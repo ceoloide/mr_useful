@@ -445,10 +445,11 @@ pcbs:
           shift: [0,1 ks]
       
       jlcpcb_order_number_text:
-        what: ceoloide/text
+        what: ceoloide/utility_text
         where: arrows_middle_up
         params:
           text: JLCJLCJLCJLC
           side: B
+          mirrored: true
         adjust:
           shift: [0,1 ks]
