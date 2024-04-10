@@ -1,12 +1,12 @@
 
-            
+
 (kicad_pcb (version 20171130) (host pcbnew 5.1.6)
 
   (page A3)
   (title_block
-    (title mr_useful)
-    (rev 0.1)
-    (company ceoloide)
+    (title "mr_useful")
+    (rev "0.1")
+    (company "ceoloide")
   )
 
   (general
@@ -92,7 +92,7 @@
       (outputdirectory ""))
   )
 
-            (net 0 "")
+  (net 0 "")
 (net 1 "C0")
 (net 2 "left_down")
 (net 3 "C1")
@@ -138,7 +138,7 @@
 (net 43 "C3")
 (net 44 "R2")
 (net 45 "RAW")
-            
+
   (net_class Default "This is the default net class."
     (clearance 0.2)
     (trace_width 0.25)
@@ -194,7 +194,7 @@
 (add_net "RAW")
   )
 
-            
+  
         
       (module MX (layer F.Cu) (tedit 5DD4F656)
       (at 60 125 180)
@@ -1730,7 +1730,7 @@
             (justify  mirror)
           )
       )
-            (gr_line (start 51.5 134.5) (end 106.5 134.5) (angle 90) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 51.5 134.5) (end 106.5 134.5) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 107.5 133.5) (end 107.5 40.5) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 106.5 39.5) (end 51.5 39.5) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 50.5 40.5) (end 50.5 133.5) (angle 90) (layer Edge.Cuts) (width 0.15))
@@ -1738,7 +1738,6 @@
 (gr_arc (start 106.5 40.5) (end 107.5 40.5) (angle -90) (layer Edge.Cuts) (width 0.15))
 (gr_arc (start 51.5 40.5) (end 51.5 39.5) (angle -90) (layer Edge.Cuts) (width 0.15))
 (gr_arc (start 51.5 133.5) (end 50.5 133.5) (angle -90) (layer Edge.Cuts) (width 0.15))
-            
+
 )
 
-        

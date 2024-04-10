@@ -1,12 +1,12 @@
 
-            
+
 (kicad_pcb (version 20171130) (host pcbnew 5.1.6)
 
   (page A3)
   (title_block
-    (title front_plate)
-    (rev 0.1)
-    (company ceoloide)
+    (title "front_plate")
+    (rev "0.1")
+    (company "ceoloide")
   )
 
   (general
@@ -92,8 +92,8 @@
       (outputdirectory ""))
   )
 
-            (net 0 "")
-            
+  (net 0 "")
+
   (net_class Default "This is the default net class."
     (clearance 0.2)
     (trace_width 0.25)
@@ -104,7 +104,7 @@
     (add_net "")
   )
 
-            
+  
     (module "logo_mr_useful" (layer "F.Cu")
       (at 79 87 0)
       (fp_text reference "LOGO1" (at 0 0) (layer F.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
@@ -401,7 +401,7 @@
         (layer F.SilkS) (width  0.01))
     )
       
-            (gr_line (start 44.5 142.5) (end 113.5 142.5) (angle 90) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 44.5 142.5) (end 113.5 142.5) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 115.5 140.5) (end 115.5 33.5) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 44.5 31.5) (end 113.5 31.5) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 42.5 140.5) (end 42.5 33.5) (angle 90) (layer Edge.Cuts) (width 0.15))
@@ -455,7 +455,6 @@
 (gr_circle (center 112 87) (end 113.1 87) (layer Edge.Cuts) (width 0.15))
 (gr_circle (center 46 139) (end 47.1 139) (layer Edge.Cuts) (width 0.15))
 (gr_circle (center 112 139) (end 113.1 139) (layer Edge.Cuts) (width 0.15))
-            
+
 )
 
-        
