@@ -5,8 +5,8 @@ container_cmd=docker
 container_args="-w /board -v $(pwd):/board --rm"
 
 # Define the boards to autoroute and export, and the plates
-boards="not_about_money"
-plates=""
+boards="mr_useful"
+plates="back_plate front_plate spacer_plate_bottom spacer_plate_top"
 
 # Define the KiCad Auto Docker image to use
 kicad_auto_image="ghcr.io/inti-cmnb/kicad8_auto:latest"
