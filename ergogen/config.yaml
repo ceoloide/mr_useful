@@ -1,5 +1,5 @@
 meta:
-  engine: 4.0.5
+  engine: 4.1.0
   name: mr_useful
   version: 0.1
   ref: &kb_ref "v0.1 pre-release"
@@ -327,10 +327,12 @@ outlines:
 
 pcbs:
   back_plate:
+    template: kicad8
     outlines:
       main:
         outline: back_plate
   front_plate:
+    template: kicad8
     outlines:
       main:
         outline: front_plate
@@ -344,25 +346,27 @@ pcbs:
         adjust:
           shift: [0,1 ks]
   spacer_plate_bottom:
+    template: kicad8
     outlines:
       main:
         outline: spacer_plate_bottom
   spacer_plate_top:
+    template: kicad8
     outlines:
       main:
         outline: spacer_plate_top
   mr_useful:
+    template: kicad8
     outlines:
       main:
         outline: pcb
     footprints:
       key_switches:
-        what: mx
+        what: ceoloide/switch_mx
         where: [key]
         params:
-          reverse: false
+          reversible: false
           hotswap: false
-          keycaps: false
           from: "{{column_net}}"
           to: "{{colrow}}"
         adjust:
