@@ -4,11 +4,11 @@
 # Kibot
 kibot_errors.filter
 *-drc.txt
+*-drc.html
 
 # Freerouting
 freerouting/freerouting-*.jar
-logs/freerouting.log
-logs
+freerouting/freerouting.log
 
 # Temporary files
 *.000
@@ -27,6 +27,7 @@ _autosave-*
 *-save.kicad_pcb
 fp-info-cache
 *.pro
+logs
 
 # Netlist files (exported from Eeschema)
 *.net
@@ -37,20 +38,22 @@ fp-info-cache
 
 # Exported BOM files
 *.xml
+!log4j2.xml
 *.csv
 
 # MacOS
 .DS_Store
 
 # ergogen
-ergogen/output/outlines/_*.*
-ergogen/output/outlines/*.yaml
-ergogen/output/points
-ergogen/output/source
+outlines/_*.*
+outlines/*.yaml
+pcbs/_*.*
+points
+source
 
 # npm
 node_modules
 
 # gerbers
-ergogen/output/gerbers/*/*
-!ergogen/output/gerbers/*/*.zip
+gerbers/*/*
+!gerbers/*/*.zip
