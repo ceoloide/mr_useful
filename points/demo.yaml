@@ -1,0 +1,602 @@
+models:
+    export:
+        models:
+            arrows_left_down:
+                paths:
+                    top:
+                        type: line
+                        origin:
+                            - 51
+                            - -116
+                        end:
+                            - 69
+                            - -116
+                    right:
+                        type: line
+                        origin:
+                            - 69
+                            - -116
+                        end:
+                            - 69
+                            - -134
+                    bottom:
+                        type: line
+                        origin:
+                            - 69
+                            - -134
+                        end:
+                            - 51
+                            - -134
+                    left:
+                        type: line
+                        origin:
+                            - 51
+                            - -134
+                        end:
+                            - 51
+                            - -116
+                origin:
+                    - 0
+                    - 0
+            arrows_middle_down:
+                paths:
+                    top:
+                        type: line
+                        origin:
+                            - 70
+                            - -116
+                        end:
+                            - 88
+                            - -116
+                    right:
+                        type: line
+                        origin:
+                            - 88
+                            - -116
+                        end:
+                            - 88
+                            - -134
+                    bottom:
+                        type: line
+                        origin:
+                            - 88
+                            - -134
+                        end:
+                            - 70
+                            - -134
+                    left:
+                        type: line
+                        origin:
+                            - 70
+                            - -134
+                        end:
+                            - 70
+                            - -116
+                origin:
+                    - 0
+                    - 0
+            arrows_middle_up:
+                paths:
+                    top:
+                        type: line
+                        origin:
+                            - 70
+                            - -97
+                        end:
+                            - 88
+                            - -97
+                    right:
+                        type: line
+                        origin:
+                            - 88
+                            - -97
+                        end:
+                            - 88
+                            - -115
+                    bottom:
+                        type: line
+                        origin:
+                            - 88
+                            - -115
+                        end:
+                            - 70
+                            - -115
+                    left:
+                        type: line
+                        origin:
+                            - 70
+                            - -115
+                        end:
+                            - 70
+                            - -97
+                origin:
+                    - 0
+                    - 0
+            arrows_right_down:
+                paths:
+                    top:
+                        type: line
+                        origin:
+                            - 89
+                            - -116
+                        end:
+                            - 107
+                            - -116
+                    right:
+                        type: line
+                        origin:
+                            - 107
+                            - -116
+                        end:
+                            - 107
+                            - -134
+                    bottom:
+                        type: line
+                        origin:
+                            - 107
+                            - -134
+                        end:
+                            - 89
+                            - -134
+                    left:
+                        type: line
+                        origin:
+                            - 89
+                            - -134
+                        end:
+                            - 89
+                            - -116
+                origin:
+                    - 0
+                    - 0
+            navigation_first_bottom:
+                paths:
+                    top:
+                        type: line
+                        origin:
+                            - 51
+                            - -59
+                        end:
+                            - 69
+                            - -59
+                    right:
+                        type: line
+                        origin:
+                            - 69
+                            - -59
+                        end:
+                            - 69
+                            - -77
+                    bottom:
+                        type: line
+                        origin:
+                            - 69
+                            - -77
+                        end:
+                            - 51
+                            - -77
+                    left:
+                        type: line
+                        origin:
+                            - 51
+                            - -77
+                        end:
+                            - 51
+                            - -59
+                origin:
+                    - 0
+                    - 0
+            navigation_first_top:
+                paths:
+                    top:
+                        type: line
+                        origin:
+                            - 51
+                            - -40
+                        end:
+                            - 69
+                            - -40
+                    right:
+                        type: line
+                        origin:
+                            - 69
+                            - -40
+                        end:
+                            - 69
+                            - -58
+                    bottom:
+                        type: line
+                        origin:
+                            - 69
+                            - -58
+                        end:
+                            - 51
+                            - -58
+                    left:
+                        type: line
+                        origin:
+                            - 51
+                            - -58
+                        end:
+                            - 51
+                            - -40
+                origin:
+                    - 0
+                    - 0
+            navigation_second_bottom:
+                paths:
+                    top:
+                        type: line
+                        origin:
+                            - 70
+                            - -59
+                        end:
+                            - 88
+                            - -59
+                    right:
+                        type: line
+                        origin:
+                            - 88
+                            - -59
+                        end:
+                            - 88
+                            - -77
+                    bottom:
+                        type: line
+                        origin:
+                            - 88
+                            - -77
+                        end:
+                            - 70
+                            - -77
+                    left:
+                        type: line
+                        origin:
+                            - 70
+                            - -77
+                        end:
+                            - 70
+                            - -59
+                origin:
+                    - 0
+                    - 0
+            navigation_second_top:
+                paths:
+                    top:
+                        type: line
+                        origin:
+                            - 70
+                            - -40
+                        end:
+                            - 88
+                            - -40
+                    right:
+                        type: line
+                        origin:
+                            - 88
+                            - -40
+                        end:
+                            - 88
+                            - -58
+                    bottom:
+                        type: line
+                        origin:
+                            - 88
+                            - -58
+                        end:
+                            - 70
+                            - -58
+                    left:
+                        type: line
+                        origin:
+                            - 70
+                            - -58
+                        end:
+                            - 70
+                            - -40
+                origin:
+                    - 0
+                    - 0
+            navigation_third_bottom:
+                paths:
+                    top:
+                        type: line
+                        origin:
+                            - 89
+                            - -59
+                        end:
+                            - 107
+                            - -59
+                    right:
+                        type: line
+                        origin:
+                            - 107
+                            - -59
+                        end:
+                            - 107
+                            - -77
+                    bottom:
+                        type: line
+                        origin:
+                            - 107
+                            - -77
+                        end:
+                            - 89
+                            - -77
+                    left:
+                        type: line
+                        origin:
+                            - 89
+                            - -77
+                        end:
+                            - 89
+                            - -59
+                origin:
+                    - 0
+                    - 0
+            navigation_third_top:
+                paths:
+                    top:
+                        type: line
+                        origin:
+                            - 89
+                            - -40
+                        end:
+                            - 107
+                            - -40
+                    right:
+                        type: line
+                        origin:
+                            - 107
+                            - -40
+                        end:
+                            - 107
+                            - -58
+                    bottom:
+                        type: line
+                        origin:
+                            - 107
+                            - -58
+                        end:
+                            - 89
+                            - -58
+                    left:
+                        type: line
+                        origin:
+                            - 89
+                            - -58
+                        end:
+                            - 89
+                            - -40
+                origin:
+                    - 0
+                    - 0
+            top_left_screw:
+                paths:
+                    top:
+                        type: line
+                        origin:
+                            - 46
+                            - -35
+                        end:
+                            - 46
+                            - -35
+                    right:
+                        type: line
+                        origin:
+                            - 46
+                            - -35
+                        end:
+                            - 46
+                            - -35
+                    bottom:
+                        type: line
+                        origin:
+                            - 46
+                            - -35
+                        end:
+                            - 46
+                            - -35
+                    left:
+                        type: line
+                        origin:
+                            - 46
+                            - -35
+                        end:
+                            - 46
+                            - -35
+                origin:
+                    - 0
+                    - 0
+            top_right_screw:
+                paths:
+                    top:
+                        type: line
+                        origin:
+                            - 112
+                            - -35
+                        end:
+                            - 112
+                            - -35
+                    right:
+                        type: line
+                        origin:
+                            - 112
+                            - -35
+                        end:
+                            - 112
+                            - -35
+                    bottom:
+                        type: line
+                        origin:
+                            - 112
+                            - -35
+                        end:
+                            - 112
+                            - -35
+                    left:
+                        type: line
+                        origin:
+                            - 112
+                            - -35
+                        end:
+                            - 112
+                            - -35
+                origin:
+                    - 0
+                    - 0
+            mid_left_screw:
+                paths:
+                    top:
+                        type: line
+                        origin:
+                            - 46
+                            - -87
+                        end:
+                            - 46
+                            - -87
+                    right:
+                        type: line
+                        origin:
+                            - 46
+                            - -87
+                        end:
+                            - 46
+                            - -87
+                    bottom:
+                        type: line
+                        origin:
+                            - 46
+                            - -87
+                        end:
+                            - 46
+                            - -87
+                    left:
+                        type: line
+                        origin:
+                            - 46
+                            - -87
+                        end:
+                            - 46
+                            - -87
+                origin:
+                    - 0
+                    - 0
+            mid_right_screw:
+                paths:
+                    top:
+                        type: line
+                        origin:
+                            - 112
+                            - -87
+                        end:
+                            - 112
+                            - -87
+                    right:
+                        type: line
+                        origin:
+                            - 112
+                            - -87
+                        end:
+                            - 112
+                            - -87
+                    bottom:
+                        type: line
+                        origin:
+                            - 112
+                            - -87
+                        end:
+                            - 112
+                            - -87
+                    left:
+                        type: line
+                        origin:
+                            - 112
+                            - -87
+                        end:
+                            - 112
+                            - -87
+                origin:
+                    - 0
+                    - 0
+            bottom_left_screw:
+                paths:
+                    top:
+                        type: line
+                        origin:
+                            - 46
+                            - -139
+                        end:
+                            - 46
+                            - -139
+                    right:
+                        type: line
+                        origin:
+                            - 46
+                            - -139
+                        end:
+                            - 46
+                            - -139
+                    bottom:
+                        type: line
+                        origin:
+                            - 46
+                            - -139
+                        end:
+                            - 46
+                            - -139
+                    left:
+                        type: line
+                        origin:
+                            - 46
+                            - -139
+                        end:
+                            - 46
+                            - -139
+                origin:
+                    - 0
+                    - 0
+            bottom_right_screw:
+                paths:
+                    top:
+                        type: line
+                        origin:
+                            - 112
+                            - -139
+                        end:
+                            - 112
+                            - -139
+                    right:
+                        type: line
+                        origin:
+                            - 112
+                            - -139
+                        end:
+                            - 112
+                            - -139
+                    bottom:
+                        type: line
+                        origin:
+                            - 112
+                            - -139
+                        end:
+                            - 112
+                            - -139
+                    left:
+                        type: line
+                        origin:
+                            - 112
+                            - -139
+                        end:
+                            - 112
+                            - -139
+                origin:
+                    - 0
+                    - 0
+        origin:
+            - 0
+            - 0
+units: mm
+origin:
+    - 0
+    - 0

@@ -1,0 +1,79 @@
+models:
+    export:
+        models:
+            '0':
+                paths:
+                    ShapeLine1_Bottom:
+                        type: line
+                        origin:
+                            - 51.5
+                            - -135.5
+                        end:
+                            - 106.5
+                            - -135.5
+                    fillet0_Outer:
+                        type: arc
+                        origin:
+                            - 106.5
+                            - -133.5
+                        radius: 2
+                        startAngle: 270
+                        endAngle: 360
+                    ShapeLine2_Bottom:
+                        type: line
+                        origin:
+                            - 108.5
+                            - -133.5
+                        end:
+                            - 108.5
+                            - -40.5
+                    fillet1_Outer:
+                        type: arc
+                        origin:
+                            - 106.5
+                            - -40.5
+                        radius: 2
+                        startAngle: 0
+                        endAngle: 90
+                    ShapeLine3_Bottom:
+                        type: line
+                        origin:
+                            - 106.5
+                            - -38.5
+                        end:
+                            - 51.5
+                            - -38.5
+                    fillet2_Outer:
+                        type: arc
+                        origin:
+                            - 51.5
+                            - -40.5
+                        radius: 2
+                        startAngle: 90
+                        endAngle: 180
+                    ShapeLine4_Bottom:
+                        type: line
+                        origin:
+                            - 49.5
+                            - -40.5
+                        end:
+                            - 49.5
+                            - -133.5
+                    fillet3_Outer:
+                        type: arc
+                        origin:
+                            - 51.5
+                            - -133.5
+                        radius: 2
+                        startAngle: 180
+                        endAngle: 270
+                origin:
+                    - 0
+                    - 0
+        origin:
+            - 0
+            - 0
+units: mm
+origin:
+    - 0
+    - 0

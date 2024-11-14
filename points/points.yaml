@@ -1,0 +1,1340 @@
+arrows_left_down:
+    x: 60
+    'y': -125
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: left_down
+        name: arrows_left_down
+        tags:
+            - key
+        column_net: C0
+        row_net: R0
+        key:
+            led_prev: LED_3
+            led_next: LED_4
+            underglow_prev: ULED_2
+            underglow_next: ULED_3
+        zone:
+            key:
+                tags:
+                    - key
+            columns:
+                left:
+                    key:
+                        column_net: C0
+                    rows:
+                        down:
+                            row_net: R0
+                            key:
+                                led_prev: LED_3
+                                led_next: LED_4
+                                underglow_prev: ULED_2
+                                underglow_next: ULED_3
+                    name: left
+                middle:
+                    key:
+                        column_net: C1
+                    rows:
+                        down:
+                            row_net: R0
+                            key:
+                                led_prev: LED_4
+                                led_next: LED_5
+                        up:
+                            row_net: R1
+                            key:
+                                led_prev: LED_5
+                                led_next: LED_6
+                                underglow_prev: ULED_1
+                                underglow_next: ULED_2
+                    name: middle
+                right:
+                    key:
+                        column_net: C2
+                    rows:
+                        down:
+                            row_net: R0
+                            key:
+                                led_prev: LED_9
+                                led_next: LED_10
+                                underglow_prev: LED_10
+                                underglow_next: ULED_1
+                    name: right
+            name: arrows
+        col:
+            key:
+                column_net: C0
+            rows:
+                down:
+                    row_net: R0
+                    key:
+                        led_prev: LED_3
+                        led_next: LED_4
+                        underglow_prev: ULED_2
+                        underglow_next: ULED_3
+            name: left
+        row: down
+        bind:
+            - 0
+            - 10
+            - 0
+            - 0
+arrows_middle_down:
+    x: 79
+    'y': -125
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: middle_down
+        name: arrows_middle_down
+        tags:
+            - key
+        column_net: C1
+        row_net: R0
+        key:
+            led_prev: LED_4
+            led_next: LED_5
+        zone:
+            key:
+                tags:
+                    - key
+            columns:
+                left:
+                    key:
+                        column_net: C0
+                    rows:
+                        down:
+                            row_net: R0
+                            key:
+                                led_prev: LED_3
+                                led_next: LED_4
+                                underglow_prev: ULED_2
+                                underglow_next: ULED_3
+                    name: left
+                middle:
+                    key:
+                        column_net: C1
+                    rows:
+                        down:
+                            row_net: R0
+                            key:
+                                led_prev: LED_4
+                                led_next: LED_5
+                        up:
+                            row_net: R1
+                            key:
+                                led_prev: LED_5
+                                led_next: LED_6
+                                underglow_prev: ULED_1
+                                underglow_next: ULED_2
+                    name: middle
+                right:
+                    key:
+                        column_net: C2
+                    rows:
+                        down:
+                            row_net: R0
+                            key:
+                                led_prev: LED_9
+                                led_next: LED_10
+                                underglow_prev: LED_10
+                                underglow_next: ULED_1
+                    name: right
+            name: arrows
+        col:
+            key:
+                column_net: C1
+            rows:
+                down:
+                    row_net: R0
+                    key:
+                        led_prev: LED_4
+                        led_next: LED_5
+                up:
+                    row_net: R1
+                    key:
+                        led_prev: LED_5
+                        led_next: LED_6
+                        underglow_prev: ULED_1
+                        underglow_next: ULED_2
+            name: middle
+        row: down
+        bind:
+            - 10
+            - 10
+            - 0
+            - 10
+arrows_middle_up:
+    x: 79
+    'y': -106
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: middle_up
+        name: arrows_middle_up
+        tags:
+            - key
+        column_net: C1
+        row_net: R1
+        key:
+            led_prev: LED_5
+            led_next: LED_6
+            underglow_prev: ULED_1
+            underglow_next: ULED_2
+        zone:
+            key:
+                tags:
+                    - key
+            columns:
+                left:
+                    key:
+                        column_net: C0
+                    rows:
+                        down:
+                            row_net: R0
+                            key:
+                                led_prev: LED_3
+                                led_next: LED_4
+                                underglow_prev: ULED_2
+                                underglow_next: ULED_3
+                    name: left
+                middle:
+                    key:
+                        column_net: C1
+                    rows:
+                        down:
+                            row_net: R0
+                            key:
+                                led_prev: LED_4
+                                led_next: LED_5
+                        up:
+                            row_net: R1
+                            key:
+                                led_prev: LED_5
+                                led_next: LED_6
+                                underglow_prev: ULED_1
+                                underglow_next: ULED_2
+                    name: middle
+                right:
+                    key:
+                        column_net: C2
+                    rows:
+                        down:
+                            row_net: R0
+                            key:
+                                led_prev: LED_9
+                                led_next: LED_10
+                                underglow_prev: LED_10
+                                underglow_next: ULED_1
+                    name: right
+            name: arrows
+        col:
+            key:
+                column_net: C1
+            rows:
+                down:
+                    row_net: R0
+                    key:
+                        led_prev: LED_4
+                        led_next: LED_5
+                up:
+                    row_net: R1
+                    key:
+                        led_prev: LED_5
+                        led_next: LED_6
+                        underglow_prev: ULED_1
+                        underglow_next: ULED_2
+            name: middle
+        row: up
+        bind:
+            - 0
+            - 0
+            - 10
+            - 0
+arrows_right_down:
+    x: 98
+    'y': -125
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: right_down
+        name: arrows_right_down
+        tags:
+            - key
+        column_net: C2
+        row_net: R0
+        key:
+            led_prev: LED_9
+            led_next: LED_10
+            underglow_prev: LED_10
+            underglow_next: ULED_1
+        zone:
+            key:
+                tags:
+                    - key
+            columns:
+                left:
+                    key:
+                        column_net: C0
+                    rows:
+                        down:
+                            row_net: R0
+                            key:
+                                led_prev: LED_3
+                                led_next: LED_4
+                                underglow_prev: ULED_2
+                                underglow_next: ULED_3
+                    name: left
+                middle:
+                    key:
+                        column_net: C1
+                    rows:
+                        down:
+                            row_net: R0
+                            key:
+                                led_prev: LED_4
+                                led_next: LED_5
+                        up:
+                            row_net: R1
+                            key:
+                                led_prev: LED_5
+                                led_next: LED_6
+                                underglow_prev: ULED_1
+                                underglow_next: ULED_2
+                    name: middle
+                right:
+                    key:
+                        column_net: C2
+                    rows:
+                        down:
+                            row_net: R0
+                            key:
+                                led_prev: LED_9
+                                led_next: LED_10
+                                underglow_prev: LED_10
+                                underglow_next: ULED_1
+                    name: right
+            name: arrows
+        col:
+            key:
+                column_net: C2
+            rows:
+                down:
+                    row_net: R0
+                    key:
+                        led_prev: LED_9
+                        led_next: LED_10
+                        underglow_prev: LED_10
+                        underglow_next: ULED_1
+            name: right
+        row: down
+        bind:
+            - 0
+            - 0
+            - 0
+            - 10
+navigation_first_bottom:
+    x: 60
+    'y': -68
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: first_bottom
+        name: navigation_first_bottom
+        tags:
+            - key
+        column_net: C0
+        row_net: R3
+        key:
+            led_prev: LED_2
+            led_next: LED_3
+            underglow_prev: ULED_3
+            underglow_next: ULED_4
+        zone:
+            key:
+                tags:
+                    - key
+            columns:
+                first:
+                    key:
+                        column_net: C0
+                    rows:
+                        top:
+                            key:
+                                led_prev: LED_1
+                                led_next: LED_2
+                        bottom:
+                            key:
+                                led_prev: LED_2
+                                led_next: LED_3
+                                underglow_prev: ULED_3
+                                underglow_next: ULED_4
+                    name: first
+                second:
+                    key:
+                        column_net: C1
+                    rows:
+                        top:
+                            key:
+                                led_prev: LED
+                                led_next: LED_1
+                        bottom:
+                            key:
+                                led_prev: LED_6
+                                led_next: LED_7
+                    name: second
+                third:
+                    key:
+                        column_net: C2
+                    rows:
+                        top:
+                            key:
+                                led_prev: LED_7
+                                led_next: LED_8
+                        bottom:
+                            key:
+                                led_prev: LED_8
+                                led_next: LED_9
+                                underglow_prev: ULED_4
+                                underglow_next: ULED_5
+                    name: third
+            rows:
+                bottom:
+                    row_net: R3
+                top:
+                    row_net: R4
+            name: navigation
+        col:
+            key:
+                column_net: C0
+            rows:
+                top:
+                    key:
+                        led_prev: LED_1
+                        led_next: LED_2
+                bottom:
+                    key:
+                        led_prev: LED_2
+                        led_next: LED_3
+                        underglow_prev: ULED_3
+                        underglow_next: ULED_4
+            name: first
+        row: bottom
+        bind:
+            - 10
+            - 10
+            - 0
+            - 0
+navigation_first_top:
+    x: 60
+    'y': -49
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: first_top
+        name: navigation_first_top
+        tags:
+            - key
+        column_net: C0
+        row_net: R4
+        key:
+            led_prev: LED_1
+            led_next: LED_2
+        zone:
+            key:
+                tags:
+                    - key
+            columns:
+                first:
+                    key:
+                        column_net: C0
+                    rows:
+                        top:
+                            key:
+                                led_prev: LED_1
+                                led_next: LED_2
+                        bottom:
+                            key:
+                                led_prev: LED_2
+                                led_next: LED_3
+                                underglow_prev: ULED_3
+                                underglow_next: ULED_4
+                    name: first
+                second:
+                    key:
+                        column_net: C1
+                    rows:
+                        top:
+                            key:
+                                led_prev: LED
+                                led_next: LED_1
+                        bottom:
+                            key:
+                                led_prev: LED_6
+                                led_next: LED_7
+                    name: second
+                third:
+                    key:
+                        column_net: C2
+                    rows:
+                        top:
+                            key:
+                                led_prev: LED_7
+                                led_next: LED_8
+                        bottom:
+                            key:
+                                led_prev: LED_8
+                                led_next: LED_9
+                                underglow_prev: ULED_4
+                                underglow_next: ULED_5
+                    name: third
+            rows:
+                bottom:
+                    row_net: R3
+                top:
+                    row_net: R4
+            name: navigation
+        col:
+            key:
+                column_net: C0
+            rows:
+                top:
+                    key:
+                        led_prev: LED_1
+                        led_next: LED_2
+                bottom:
+                    key:
+                        led_prev: LED_2
+                        led_next: LED_3
+                        underglow_prev: ULED_3
+                        underglow_next: ULED_4
+            name: first
+        row: top
+        bind:
+            - 0
+            - 10
+            - 10
+            - 0
+navigation_second_bottom:
+    x: 79
+    'y': -68
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: second_bottom
+        name: navigation_second_bottom
+        tags:
+            - key
+        column_net: C1
+        row_net: R3
+        key:
+            led_prev: LED_6
+            led_next: LED_7
+        zone:
+            key:
+                tags:
+                    - key
+            columns:
+                first:
+                    key:
+                        column_net: C0
+                    rows:
+                        top:
+                            key:
+                                led_prev: LED_1
+                                led_next: LED_2
+                        bottom:
+                            key:
+                                led_prev: LED_2
+                                led_next: LED_3
+                                underglow_prev: ULED_3
+                                underglow_next: ULED_4
+                    name: first
+                second:
+                    key:
+                        column_net: C1
+                    rows:
+                        top:
+                            key:
+                                led_prev: LED
+                                led_next: LED_1
+                        bottom:
+                            key:
+                                led_prev: LED_6
+                                led_next: LED_7
+                    name: second
+                third:
+                    key:
+                        column_net: C2
+                    rows:
+                        top:
+                            key:
+                                led_prev: LED_7
+                                led_next: LED_8
+                        bottom:
+                            key:
+                                led_prev: LED_8
+                                led_next: LED_9
+                                underglow_prev: ULED_4
+                                underglow_next: ULED_5
+                    name: third
+            rows:
+                bottom:
+                    row_net: R3
+                top:
+                    row_net: R4
+            name: navigation
+        col:
+            key:
+                column_net: C1
+            rows:
+                top:
+                    key:
+                        led_prev: LED
+                        led_next: LED_1
+                bottom:
+                    key:
+                        led_prev: LED_6
+                        led_next: LED_7
+            name: second
+        row: bottom
+        bind:
+            - 10
+            - 10
+            - 0
+            - 10
+navigation_second_top:
+    x: 79
+    'y': -49
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: second_top
+        name: navigation_second_top
+        tags:
+            - key
+        column_net: C1
+        row_net: R4
+        key:
+            led_prev: LED
+            led_next: LED_1
+        zone:
+            key:
+                tags:
+                    - key
+            columns:
+                first:
+                    key:
+                        column_net: C0
+                    rows:
+                        top:
+                            key:
+                                led_prev: LED_1
+                                led_next: LED_2
+                        bottom:
+                            key:
+                                led_prev: LED_2
+                                led_next: LED_3
+                                underglow_prev: ULED_3
+                                underglow_next: ULED_4
+                    name: first
+                second:
+                    key:
+                        column_net: C1
+                    rows:
+                        top:
+                            key:
+                                led_prev: LED
+                                led_next: LED_1
+                        bottom:
+                            key:
+                                led_prev: LED_6
+                                led_next: LED_7
+                    name: second
+                third:
+                    key:
+                        column_net: C2
+                    rows:
+                        top:
+                            key:
+                                led_prev: LED_7
+                                led_next: LED_8
+                        bottom:
+                            key:
+                                led_prev: LED_8
+                                led_next: LED_9
+                                underglow_prev: ULED_4
+                                underglow_next: ULED_5
+                    name: third
+            rows:
+                bottom:
+                    row_net: R3
+                top:
+                    row_net: R4
+            name: navigation
+        col:
+            key:
+                column_net: C1
+            rows:
+                top:
+                    key:
+                        led_prev: LED
+                        led_next: LED_1
+                bottom:
+                    key:
+                        led_prev: LED_6
+                        led_next: LED_7
+            name: second
+        row: top
+        bind:
+            - 0
+            - 10
+            - 10
+            - 10
+navigation_third_bottom:
+    x: 98
+    'y': -68
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: third_bottom
+        name: navigation_third_bottom
+        tags:
+            - key
+        column_net: C2
+        row_net: R3
+        key:
+            led_prev: LED_8
+            led_next: LED_9
+            underglow_prev: ULED_4
+            underglow_next: ULED_5
+        zone:
+            key:
+                tags:
+                    - key
+            columns:
+                first:
+                    key:
+                        column_net: C0
+                    rows:
+                        top:
+                            key:
+                                led_prev: LED_1
+                                led_next: LED_2
+                        bottom:
+                            key:
+                                led_prev: LED_2
+                                led_next: LED_3
+                                underglow_prev: ULED_3
+                                underglow_next: ULED_4
+                    name: first
+                second:
+                    key:
+                        column_net: C1
+                    rows:
+                        top:
+                            key:
+                                led_prev: LED
+                                led_next: LED_1
+                        bottom:
+                            key:
+                                led_prev: LED_6
+                                led_next: LED_7
+                    name: second
+                third:
+                    key:
+                        column_net: C2
+                    rows:
+                        top:
+                            key:
+                                led_prev: LED_7
+                                led_next: LED_8
+                        bottom:
+                            key:
+                                led_prev: LED_8
+                                led_next: LED_9
+                                underglow_prev: ULED_4
+                                underglow_next: ULED_5
+                    name: third
+            rows:
+                bottom:
+                    row_net: R3
+                top:
+                    row_net: R4
+            name: navigation
+        col:
+            key:
+                column_net: C2
+            rows:
+                top:
+                    key:
+                        led_prev: LED_7
+                        led_next: LED_8
+                bottom:
+                    key:
+                        led_prev: LED_8
+                        led_next: LED_9
+                        underglow_prev: ULED_4
+                        underglow_next: ULED_5
+            name: third
+        row: bottom
+        bind:
+            - 10
+            - 0
+            - 0
+            - 10
+navigation_third_top:
+    x: 98
+    'y': -49
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 18
+        height: 18
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: third_top
+        name: navigation_third_top
+        tags:
+            - key
+        column_net: C2
+        row_net: R4
+        key:
+            led_prev: LED_7
+            led_next: LED_8
+        zone:
+            key:
+                tags:
+                    - key
+            columns:
+                first:
+                    key:
+                        column_net: C0
+                    rows:
+                        top:
+                            key:
+                                led_prev: LED_1
+                                led_next: LED_2
+                        bottom:
+                            key:
+                                led_prev: LED_2
+                                led_next: LED_3
+                                underglow_prev: ULED_3
+                                underglow_next: ULED_4
+                    name: first
+                second:
+                    key:
+                        column_net: C1
+                    rows:
+                        top:
+                            key:
+                                led_prev: LED
+                                led_next: LED_1
+                        bottom:
+                            key:
+                                led_prev: LED_6
+                                led_next: LED_7
+                    name: second
+                third:
+                    key:
+                        column_net: C2
+                    rows:
+                        top:
+                            key:
+                                led_prev: LED_7
+                                led_next: LED_8
+                        bottom:
+                            key:
+                                led_prev: LED_8
+                                led_next: LED_9
+                                underglow_prev: ULED_4
+                                underglow_next: ULED_5
+                    name: third
+            rows:
+                bottom:
+                    row_net: R3
+                top:
+                    row_net: R4
+            name: navigation
+        col:
+            key:
+                column_net: C2
+            rows:
+                top:
+                    key:
+                        led_prev: LED_7
+                        led_next: LED_8
+                bottom:
+                    key:
+                        led_prev: LED_8
+                        led_next: LED_9
+                        underglow_prev: ULED_4
+                        underglow_next: ULED_5
+            name: third
+        row: top
+        bind:
+            - 0
+            - 0
+            - 10
+            - 10
+top_left_screw:
+    x: 46
+    'y': -35
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 0
+        height: 0
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: default_default
+        name: top_left_screw
+        tags:
+            - screw
+        zone:
+            key:
+                tags:
+                    - screw
+                height: 0
+                width: 0
+            columns:
+                default:
+                    rows: {}
+                    key: {}
+                    name: default
+            name: top_left_screw
+        col:
+            rows: {}
+            key: {}
+            name: default
+        row: default
+        bind:
+            - 0
+            - 0
+            - 0
+            - 0
+top_right_screw:
+    x: 112
+    'y': -35
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 0
+        height: 0
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: default_default
+        name: top_right_screw
+        tags:
+            - screw
+        zone:
+            key:
+                tags:
+                    - screw
+                height: 0
+                width: 0
+            columns:
+                default:
+                    rows: {}
+                    key: {}
+                    name: default
+            name: top_right_screw
+        col:
+            rows: {}
+            key: {}
+            name: default
+        row: default
+        bind:
+            - 0
+            - 0
+            - 0
+            - 0
+mid_left_screw:
+    x: 46
+    'y': -87
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 0
+        height: 0
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: default_default
+        name: mid_left_screw
+        tags:
+            - screw
+        zone:
+            key:
+                tags:
+                    - screw
+                height: 0
+                width: 0
+            columns:
+                default:
+                    rows: {}
+                    key: {}
+                    name: default
+            name: mid_left_screw
+        col:
+            rows: {}
+            key: {}
+            name: default
+        row: default
+        bind:
+            - 0
+            - 0
+            - 0
+            - 0
+mid_right_screw:
+    x: 112
+    'y': -87
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 0
+        height: 0
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: default_default
+        name: mid_right_screw
+        tags:
+            - screw
+        zone:
+            key:
+                tags:
+                    - screw
+                height: 0
+                width: 0
+            columns:
+                default:
+                    rows: {}
+                    key: {}
+                    name: default
+            name: mid_right_screw
+        col:
+            rows: {}
+            key: {}
+            name: default
+        row: default
+        bind:
+            - 0
+            - 0
+            - 0
+            - 0
+bottom_left_screw:
+    x: 46
+    'y': -139
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 0
+        height: 0
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: default_default
+        name: bottom_left_screw
+        tags:
+            - screw
+        zone:
+            key:
+                tags:
+                    - screw
+                height: 0
+                width: 0
+            columns:
+                default:
+                    rows: {}
+                    key: {}
+                    name: default
+            name: bottom_left_screw
+        col:
+            rows: {}
+            key: {}
+            name: default
+        row: default
+        bind:
+            - 0
+            - 0
+            - 0
+            - 0
+bottom_right_screw:
+    x: 112
+    'y': -139
+    r: 0
+    meta:
+        stagger: 0
+        spread: 19
+        splay: 0
+        origin:
+            - 0
+            - 0
+        orient: 0
+        shift:
+            - 0
+            - 0
+        rotate: 0
+        adjust: {}
+        width: 0
+        height: 0
+        padding: 19
+        autobind: 10
+        skip: false
+        asym: both
+        colrow: default_default
+        name: bottom_right_screw
+        tags:
+            - screw
+        zone:
+            key:
+                tags:
+                    - screw
+                height: 0
+                width: 0
+            columns:
+                default:
+                    rows: {}
+                    key: {}
+                    name: default
+            name: bottom_right_screw
+        col:
+            rows: {}
+            key: {}
+            name: default
+        row: default
+        bind:
+            - 0
+            - 0
+            - 0
+            - 0
