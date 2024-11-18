@@ -383,7 +383,7 @@ pcbs:
           reversible: false
           reverse_mount: true
           include_courtyard: false
-          include_keepout: false
+          include_keepout: true
         adjust:
           shift: [led_pos_x, led_pos_y]
           rotate: led_rotation
@@ -404,7 +404,7 @@ pcbs:
           reversible: false
           reverse_mount: false
           include_courtyard: false
-          include_keepout: false
+          include_keepout: true
         adjust:
           shift: [0, vertical_underglow_shift]
           rotate: led_rotation + 180
