@@ -1,5 +1,6 @@
 {
     "scripts": {
+        "postinstall": "git submodule update --init --recursive --remote",
         "build": "ergogen ./ergogen/ --output ./ --clear",
         "debug": "ergogen ./ergogen/ --output ./ --clear --debug",
         "watch:build": "nodemon -e yaml -x \"npm run build\"",
